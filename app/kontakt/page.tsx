@@ -1,7 +1,6 @@
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Kontakt",
