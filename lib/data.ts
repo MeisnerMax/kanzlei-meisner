@@ -1,5 +1,4 @@
-import type { BlogPost } from "@/components/BlogPostCard";
-import type { FAQ } from "@/components/FAQAccordion";
+import type { BlogPost, FAQ } from "@/lib/types";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -40,4 +39,3 @@ export const faqs: FAQ[] = [
     a: "Bei Unklarheiten zur Erbfolge, Pflichtteilsansprüchen, in Erbengemeinschaften oder bei der Gestaltung eines Testaments."
   }
 ];
-

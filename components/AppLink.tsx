@@ -1,12 +1,15 @@
-import Link, { LinkProps } from "next/link";
-import { AnchorHTMLAttributes, forwardRef } from "react";
+import Link from "next/link";
+import { AnchorHTMLAttributes, forwardRef, type ComponentProps } from "react";
 import { cn } from "@/lib/utils";
 
 type Variant = "default" | "nav" | "button";
 
-export interface AppLinkProps extends LinkProps, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps> {
+type NextLinkProps = ComponentProps<typeof Link>;
+
+export interface AppLinkProps extends Omit<NextLinkProps, "className">, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof NextLinkProps> {
   variant?: Variant;
   active?: boolean;
+  className?: string;
 }
 
 function classes(variant: Variant, active?: boolean) {
@@ -30,4 +33,3 @@ const AppLink = forwardRef<HTMLAnchorElement, AppLinkProps>(function AppLink(
 });
 
 export default AppLink;
-
