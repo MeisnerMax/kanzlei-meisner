@@ -1,31 +1,55 @@
+@config "../tailwind.config.js";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --header-height: 64px;
+@layer base {
+  :root {
+    --header-height: 64px;
+    --color-primary-600: #2E547C;
+    --color-primary-700: #0A2240;
+    --bg-dark: #051323;
+    --accent: #ffffff;
+    --accent-muted: #e5e7eb;
+  }
+
+  html, body {
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    scroll-behavior: smooth;
+    background-image: radial-gradient(800px 400px at 0% -10%, rgba(64,95,159,0.06), transparent),
+      radial-gradient(700px 350px at 100% 0%, rgba(106,137,194,0.06), transparent);
+    background-repeat: no-repeat;
+  }
+
+  a {
+    color: var(--accent);
+    text-underline-offset: 4px;
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--accent-muted);
+    text-decoration: underline;
+  }
 }
 
-html, body {
-  @apply bg-white text-gray-900 scroll-smooth;
-  background-image: radial-gradient(800px 400px at 0% -10%, rgba(5, 13, 29, 0.06), transparent),
-    radial-gradient(700px 350px at 100% 0%, rgba(106,137,194,0.06), transparent);
-  background-repeat: no-repeat;
-}
+@layer components {
+  /* Dark footer overrides to keep text and borders light */
+  footer.dark-footer .text-gray-900 { color: #fff; }
+  footer.dark-footer .text-gray-600 { color: rgba(255,255,255,0.7); }
+  footer.dark-footer .text-gray-500 { color: rgba(255,255,255,0.6); }
+  footer.dark-footer .border-gray-100 { border-color: rgba(255,255,255,0.1); }
 
-a {
-  @apply text-primary-700 hover:text-primary-600 underline-offset-4 hover:underline;
-}
+  .container-max {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
 
-.container-max {
-  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  .prose-legal h2 { @apply text-xl font-semibold mt-8 mb-4; }
+  .prose-legal h3 { @apply text-lg font-semibold mt-6 mb-3; }
+  .prose-legal p { @apply mb-4 leading-relaxed; }
+  .prose-legal ul { @apply list-disc pl-6 mb-4; }
+  .prose-legal ol { @apply list-decimal pl-6 mb-4; }
 }
-
-.prose-legal h2 { @apply text-xl font-semibold mt-8 mb-4; }
-.prose-legal h3 { @apply text-lg font-semibold mt-6 mb-3; }
-.prose-legal p { @apply mb-4 leading-relaxed; }
-.prose-legal ul { @apply list-disc pl-6 mb-4; }
-.prose-legal ol { @apply list-decimal pl-6 mb-4; }
 
 @layer utilities {
   .bg-grid {

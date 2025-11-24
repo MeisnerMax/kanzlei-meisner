@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kanzlei",
   description:
-    "Philosophie, Ablauf der Mandatsaufnahme sowie Hinweise zu Kosten und Erstberatung der Kanzlei Meisner in Haßfurt."
+    "Philosophie, Ablauf der Mandatsaufnahme sowie Hinweise zu Kosten und Erstberatung – Volljuristin Meisner in der Kanzlei Haßfurt Fischer (Standorte Haßfurt und Ebern)."
 };
 
 export default function Page() {

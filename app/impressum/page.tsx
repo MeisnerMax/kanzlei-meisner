@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Gesetzliche Anbieterkennzeichnung der Kanzlei Meisner in Haßfurt."
+  description: "Gesetzliche Anbieterkennzeichnung – Volljuristin Meisner in der Kanzlei Haßfurt Fischer (Standorte Haßfurt und Ebern)."
 };
 
 export default function Page() {
   return (
-    <section className="py-14 sm:py-16">
-      <div className="container-max max-w-3xl prose-legal">
-        <h1 className="font-serif text-3xl font-semibold text-gray-900">Impressum</h1>
+    <Section variant="subtle" as="h1" title="Impressum">
+      <div className="max-w-3xl prose-legal">
         <h2>Angaben gemäß § 5 TMG</h2>
         <p>
-          Kanzlei Meisner
+          Volljuristin Meisner in der Kanzlei Haßfurt Fischer
           <br /> Musterstraße 12
           <br /> 97437 Haßfurt
         </p>
@@ -39,6 +39,6 @@ export default function Page() {
           ersetzen.
         </p>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -15,25 +15,25 @@ const config: Config = {
       },
       backgroundImage: {
         'grid-pattern':
-          "linear-gradient(to right, rgba(39,59,99,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(39,59,99,0.06) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(10,34,64,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,34,64,0.06) 1px, transparent 1px)",
         'dots-pattern':
-          "radial-gradient(rgba(39,59,99,0.08) 1px, transparent 1px)",
+          "radial-gradient(rgba(10,34,64,0.08) 1px, transparent 1px)",
         'radial-spot':
-          "radial-gradient(600px 300px at 10% 10%, rgba(64,95,159,0.12), transparent), radial-gradient(500px 250px at 90% 0%, rgba(106,137,194,0.10), transparent)"
+          "radial-gradient(600px 300px at 10% 10%, rgba(10,34,64,0.12), transparent), radial-gradient(500px 250px at 90% 0%, rgba(26,57,102,0.10), transparent)"
       },
       colors: {
         primary: {
-          DEFAULT: '#273B63',
-          50: '#F1F4FA',
-          100: '#E3E9F4',
-          200: '#C2CFE6',
-          300: '#9DB4D8',
-          400: '#6A89C2',
-          500: '#405F9F',
-          600: '#304A81',
-          700: '#273B63',
-          800: '#1E2D4A',
-          900: '#152033'
+          DEFAULT: '#0A2240',
+          50: '#F1F4F8',
+          100: '#E3E9F1',
+          200: '#C7D3E3',
+          300: '#A8BBD1',
+          400: '#7E99B7',
+          500: '#4F7398',
+          600: '#2E547C',
+          700: '#0A2240',
+          800: '#071A31',
+          900: '#051323'
         }
       }
     },

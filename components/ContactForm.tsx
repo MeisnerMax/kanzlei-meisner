@@ -56,7 +56,7 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} noValidate className="space-y-5" aria-labelledby="contact-form-title">
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Ihr Name</label>
+          <label htmlFor="name" className="block text-sm font-medium text-white/80">Ihr Name</label>
           <input
             id="name"
             name="name"
@@ -65,12 +65,12 @@ export default function ContactForm() {
             aria-invalid={!!errors.name}
             aria-describedby={errors.name ? "error-name" : undefined}
             placeholder="Max Mustermann"
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-primary-600 focus:ring-1 focus:ring-primary-600"
+            className="mt-1 w-full rounded-lg border border-white/20 px-3 py-2 focus:border-white/40 focus:ring-1 focus:ring-white/40"
           />
           {errors.name && <p id="error-name" className="mt-1 text-sm text-red-600">{errors.name}</p>}
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">E-Mail</label>
+          <label htmlFor="email" className="block text-sm font-medium text-white/80">E-Mail</label>
           <input
             id="email"
             type="email"
@@ -80,25 +80,25 @@ export default function ContactForm() {
             aria-invalid={!!errors.email}
             aria-describedby={errors.email ? "error-email" : undefined}
             placeholder="beispiel@mail.de"
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-primary-600 focus:ring-1 focus:ring-primary-600"
+            className="mt-1 w-full rounded-lg border border-white/20 px-3 py-2 focus:border-white/40 focus:ring-1 focus:ring-white/40"
           />
           {errors.email && <p id="error-email" className="mt-1 text-sm text-red-600">{errors.email}</p>}
         </div>
       </div>
       <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Telefon</label>
+          <label htmlFor="phone" className="block text-sm font-medium text-white/80">Telefon</label>
           <input
             id="phone"
             name="phone"
             value={values.phone}
             onChange={(e) => onChange("phone", e.target.value)}
             placeholder="z. B. 0951 2000000"
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-primary-600 focus:ring-1 focus:ring-primary-600"
+            className="mt-1 w-full rounded-lg border border-white/20 px-3 py-2 focus:border-white/40 focus:ring-1 focus:ring-white/40"
           />
         </div>
         <div>
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Betreff</label>
+          <label htmlFor="subject" className="block text-sm font-medium text-white/80">Betreff</label>
           <input
             id="subject"
             name="subject"
@@ -107,13 +107,13 @@ export default function ContactForm() {
             aria-invalid={!!errors.subject}
             aria-describedby={errors.subject ? "error-subject" : undefined}
             placeholder="Kurzthema Ihres Anliegens"
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-primary-600 focus:ring-1 focus:ring-primary-600"
+            className="mt-1 w-full rounded-lg border border-white/20 px-3 py-2 focus:border-white/40 focus:ring-1 focus:ring-white/40"
           />
           {errors.subject && <p id="error-subject" className="mt-1 text-sm text-red-600">{errors.subject}</p>}
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Nachricht</label>
+        <label htmlFor="message" className="block text-sm font-medium text-white/80">Nachricht</label>
         <textarea
           id="message"
           name="message"
@@ -123,7 +123,7 @@ export default function ContactForm() {
           aria-invalid={!!errors.message}
           aria-describedby={errors.message ? "error-message" : undefined}
           placeholder="Beschreiben Sie Ihr Anliegen in wenigen Sätzen."
-          className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-primary-600 focus:ring-1 focus:ring-primary-600"
+          className="mt-1 w-full rounded-lg border border-white/20 px-3 py-2 focus:border-white/40 focus:ring-1 focus:ring-white/40"
         />
         {errors.message && <p id="error-message" className="mt-1 text-sm text-red-600">{errors.message}</p>}
       </div>
@@ -136,20 +136,20 @@ export default function ContactForm() {
           onChange={(e) => onChange("privacy", e.target.checked)}
           aria-invalid={!!errors.privacy}
           aria-describedby={errors.privacy ? "error-privacy" : undefined}
-          className="mt-1 h-4 w-4 rounded border-gray-300"
+          className="mt-1 h-4 w-4 rounded border-white/25"
         />
-        <label htmlFor="privacy" className="text-sm text-gray-700">
+        <label htmlFor="privacy" className="text-sm text-white/80">
           Ich habe die <a className="underline" href="/datenschutz" target="_blank" rel="noreferrer">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung zu.
         </label>
       </div>
       {errors.privacy && <p id="error-privacy" className="text-sm text-red-600">{errors.privacy}</p>}
       <div className="flex items-center gap-3">
         <Button type="submit" disabled={sending}>{sending ? "Senden…" : "Jetzt Nachricht senden"}</Button>
-        <a href="mailto:kanzlei@example.com?subject=Anfrage%20über%20Website" className="text-sm text-gray-700">oder per E-Mail</a>
+        <a href="mailto:kanzlei@example.com?subject=Anfrage%20über%20Website" className="text-sm text-white/80">oder per E-Mail</a>
       </div>
-      {status && <p className="text-sm text-gray-700">{status}</p>}
-      <div className="rounded-xl border border-white/40 bg-white/80 backdrop-blur-md p-4 text-sm text-gray-700">
-        <p className="font-medium text-gray-900">Hinweis zum Datenschutz</p>
+      {status && <p className="text-sm text-white/80">{status}</p>}
+      <div className="rounded-xl border border-white/40 bg-white/10 backdrop-blur-md p-4 text-sm text-white/80">
+        <p className="font-medium text-white">Hinweis zum Datenschutz</p>
         <p>
           Ihre Angaben werden vertraulich behandelt. Wir verwenden Ihre Daten ausschließlich zur
           Bearbeitung Ihrer Anfrage. Es gelten die Hinweise unter <a className="underline" href="/datenschutz">Datenschutz</a>.
@@ -158,3 +158,4 @@ export default function ContactForm() {
     </form>
   );
 }
+

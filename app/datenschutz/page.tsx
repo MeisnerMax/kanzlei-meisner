@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Informationen zur Verarbeitung personenbezogener Daten auf dieser Website."
+  description: "Informationen zur Verarbeitung personenbezogener Daten – Kanzlei Haßfurt Fischer (Volljuristin Meisner)."
 };
 
 export default function Page() {
   return (
-    <section className="py-14 sm:py-16">
-      <div className="container-max max-w-3xl prose-legal">
-        <h1 className="font-serif text-3xl font-semibold text-gray-900">Datenschutzerklärung</h1>
+    <Section variant="subtle" as="h1" title="Datenschutzerklärung">
+      <div className="max-w-3xl prose-legal">
         <h2>Allgemeine Hinweise</h2>
         <p>
           Der Schutz Ihrer Daten ist uns wichtig. Personenbezogene Daten werden gemäß DSGVO und BDSG
@@ -17,7 +17,7 @@ export default function Page() {
         </p>
         <h3>Verantwortliche Stelle</h3>
         <p>
-          Kanzlei Meisner, Musterstraße 12, 97437 Haßfurt, E-Mail: kanzlei@example.com
+          Volljuristin Meisner in der Kanzlei Haßfurt Fischer, Musterstraße 12, 97437 Haßfurt, E-Mail: kanzlei@example.com
         </p>
         <h3>Server-Logfiles</h3>
         <p>
@@ -36,6 +36,6 @@ export default function Page() {
           <li>Datenübertragbarkeit</li>
         </ul>
       </div>
-    </section>
+    </Section>
   );
 }

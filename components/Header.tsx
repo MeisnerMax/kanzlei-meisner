@@ -7,7 +7,6 @@ import MobileMenu from "@/components/MobileMenu";
 
 const nav = [
   { href: "/", label: "Start" },
-  { href: "/leistungen", label: "Leistungen" },
   { href: "/familienrecht", label: "Familienrecht" },
   { href: "/erbrecht", label: "Erbrecht" },
   { href: "/kanzlei", label: "Kanzlei" },
@@ -18,16 +17,16 @@ const nav = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 shadow-sm">
+    <header className="fixed top-0 inset-x-0 z-50 bg-primary-900/70 backdrop-blur border-b border-white/10 shadow-sm text-white">
       <div className="container-max h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 no-underline">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">M</span>
-          <span className="font-serif text-lg font-semibold text-gray-900">Kanzlei Meisner</span>
+          <span className="font-serif text-lg font-semibold text-white">Volljuristin Kanzlei Fischer</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1" aria-label="Hauptnavigation">
           {nav.map((n) => (
             <NavLink key={n.href} href={n.href} active={pathname === n.href}>
-              {n.label}
+              {n.href === "/anwalt" ? "Meisner" : n.label}
             </NavLink>
           ))}
         </nav>
@@ -43,3 +42,9 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
+
+

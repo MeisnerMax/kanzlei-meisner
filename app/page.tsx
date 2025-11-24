@@ -8,17 +8,17 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Kanzlei Meisner – Familienrecht & Erbrecht in Haßfurt",
+  title: "Volljuristin Meisner – Kanzlei Haßfurt Fischer",
   description:
-    "Rechtsanwältin für Familienrecht und Erbrecht in Haßfurt: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+    "Beratung in Familien- und Erbrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
   openGraph: {
-    title: "Kanzlei Meisner – Familienrecht & Erbrecht in Haßfurt",
+    title: "Volljuristin Meisner – Kanzlei Haßfurt Fischer",
     description:
-      "Rechtsanwältin für Familienrecht und Erbrecht in Haßfurt: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+      "Beratung in Familien- und Erbrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
     type: "website",
     url: "https://example.com/",
     images: [
-      { url: "/hero-illustration.svg", width: 1200, height: 630, alt: "Kanzlei Meisner" }
+      { url: "/hero-illustration.svg", width: 1200, height: 630, alt: "Kanzlei Haßfurt Fischer" }
     ]
   }
 };
@@ -31,7 +31,7 @@ export default function Page() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LegalService',
-            name: 'Kanzlei Meisner',
+            name: 'Volljuristin Meisner in der Kanzlei Haßfurt Fischer',
             image: 'https://example.com/hero-illustration.svg',
             address: {
               '@type': 'PostalAddress',
@@ -42,7 +42,7 @@ export default function Page() {
             },
             url: 'https://example.com',
             telephone: '+49 9512 000000',
-            areaServed: 'Haßfurt'
+            areaServed: 'Haßfurt und Ebern'
           })
         }}
       />
@@ -53,26 +53,31 @@ export default function Page() {
             title="Trennung & Scheidung"
             text="Begleitung durch das Scheidungsverfahren, Unterhalt, Zugewinnausgleich, Vermögensaufteilung."
             href="/familienrecht"
+            
           />
           <Card
             title="Sorgerecht & Umgang"
             text="Kindeswohl im Fokus: Umgangsregelungen, Sorgerechtsfragen, Mediation."
             href="/familienrecht"
+            
           />
           <Card
             title="Testament & Erbfolge"
             text="Gestaltung von Testamenten, gesetzliche Erbfolge, Pflichtteilsrechte."
             href="/erbrecht"
+            
           />
           <Card
             title="Erbengemeinschaft"
             text="Auseinandersetzung von Nachlässen, Durchsetzung von Ansprüchen, Konfliktlösung."
             href="/erbrecht"
+            
           />
           <Card
             title="Erstberatung"
             text="Strukturiert, transparent, lösungsorientiert – klärt die nächsten Schritte."
             href="/kontakt"
+            
           />
         </div>
       </Section>

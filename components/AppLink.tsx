@@ -15,14 +15,14 @@ export interface AppLinkProps extends Omit<NextLinkProps, "className">, Omit<Anc
 function classes(variant: Variant, active?: boolean) {
   if (variant === "nav") {
     return cn(
-      "px-3 py-2 rounded-md text-sm font-medium no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600",
-      active ? "text-primary-700 bg-primary-50" : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+      "px-3 py-2 rounded-md text-sm font-medium no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50",
+      active ? "text-white bg-white/10" : "text-white/80 hover:text-white hover:bg-white/10"
     );
   }
   if (variant === "button") {
     return "inline-flex items-center rounded-md bg-primary-700 px-5 py-3 text-white font-medium shadow-sm hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600";
   }
-  return "underline underline-offset-4 text-primary-700 hover:text-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600";
+  return "underline underline-offset-4 text-white hover:text-white/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50";
 }
 
 const AppLink = forwardRef<HTMLAnchorElement, AppLinkProps>(function AppLink(

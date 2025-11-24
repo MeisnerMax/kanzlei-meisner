@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Reveal from "@/components/Reveal";
 
 export default function Section({
   title,
@@ -11,7 +12,7 @@ export default function Section({
 }: {
   title?: string;
   intro?: string;
-  variant?: "default" | "subtle" | "contrast" | "pattern";
+  variant?: "default" | "subtle" | "contrast" | "pattern" | "muted";
   as?: "h1" | "h2" | "h3";
   align?: "left" | "center";
   eyebrow?: string;
@@ -20,11 +21,13 @@ export default function Section({
   const wrapClasses = (() => {
     switch (variant) {
       case "subtle":
-        return "relative bg-gray-50/60";
+        return "relative bg-white/5";
+      case "muted":
+        return "relative bg-white/5";
       case "contrast":
-        return "relative bg-gradient-to-b from-primary-50 to-white with-blob";
+        return "relative bg-gradient-to-b from-white/10 to-transparent with-blob";
       case "pattern":
-        return "relative bg-white bg-grid/50";
+        return "relative bg-transparent bg-grid/10";
       default:
         return "relative";
     }
@@ -36,20 +39,20 @@ export default function Section({
         {title ? (
           <div className={`max-w-3xl mb-10 ${headAlign}`}>
             {eyebrow ? (
-              <p className="text-xs tracking-widest uppercase text-primary-700/80">{eyebrow}</p>
+              <p className="text-xs tracking-widest uppercase text-white/70">{eyebrow}</p>
             ) : null}
             {as === "h1" ? (
-              <h1 className="font-serif text-4xl sm:text-5xl font-semibold text-gray-900">{title}</h1>
+              <h1 className="font-serif text-4xl sm:text-5xl font-semibold text-white">{title}</h1>
             ) : as === "h3" ? (
-              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-gray-900">{title}</h3>
+              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white">{title}</h3>
             ) : (
-              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-gray-900">{title}</h2>
+              <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-white">{title}</h2>
             )}
-            {intro ? <p className="mt-4 text-gray-700 leading-relaxed">{intro}</p> : null}
+            {intro ? <p className="mt-4 text-white/80 leading-relaxed">{intro}</p> : null}
             <div className={`after:block after:h-0.5 after:w-16 after:bg-primary-700 after:mt-6 ${align === "center" ? "after:mx-auto" : ""}`} />
           </div>
         ) : null}
-        {children}
+        <Reveal>{children}</Reveal>
       </div>
     </section>
   );
