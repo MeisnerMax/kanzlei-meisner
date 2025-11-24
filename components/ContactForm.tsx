@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from "@/components/Button";
 
 type FormState = {
@@ -47,7 +46,7 @@ export default function ContactForm() {
     // Wir simulieren den Versand nur im Frontend.
     setTimeout(() => {
       // eslint-disable-next-line no-console
-      console.log("Kontaktformular (Demo)", values); // oder entferne ganz
+      console.log("Kontaktformular (Demo)", values);
       setSending(false);
       setStatus("Versand-Demo: Ihre Anfrage würde jetzt übermittelt werden.");
       setValues(initial);
