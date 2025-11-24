@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 64px;
+}
+
+html, body {
+  @apply bg-white text-gray-900 scroll-smooth;
+  background-image: radial-gradient(800px 400px at 0% -10%, rgba(5, 13, 29, 0.06), transparent),
+    radial-gradient(700px 350px at 100% 0%, rgba(106,137,194,0.06), transparent);
+  background-repeat: no-repeat;
+}
+
+a {
+  @apply text-primary-700 hover:text-primary-600 underline-offset-4 hover:underline;
+}
+
+.container-max {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.prose-legal h2 { @apply text-xl font-semibold mt-8 mb-4; }
+.prose-legal h3 { @apply text-lg font-semibold mt-6 mb-3; }
+.prose-legal p { @apply mb-4 leading-relaxed; }
+.prose-legal ul { @apply list-disc pl-6 mb-4; }
+.prose-legal ol { @apply list-decimal pl-6 mb-4; }
+
+@layer utilities {
+  .bg-grid {
+    background-image: theme('backgroundImage.grid-pattern');
+    background-size: 24px 24px;
+    background-position: center;
+  }
+  .bg-dots {
+    background-image: theme('backgroundImage.dots-pattern');
+    background-size: 14px 14px;
+    background-position: center;
+  }
+  .with-blob {
+    position: relative;
+  }
+  .with-blob::before {
+    content: "";
+    position: absolute;
+    inset: -2rem -0rem auto -0rem;
+    height: 360px;
+    background-image: theme('backgroundImage.radial-spot');
+    filter: blur(0px);
+    z-index: 0;
+    pointer-events: none;
+  }
+}

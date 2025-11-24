@@ -1,0 +1,157 @@
+codex /specify "Erstelle ein vollständiges, produktionsreifes Webprojekt für eine Rechtsanwältin, die auf Familienrecht und Erbrecht spezialisiert ist. Die Website soll modern, vertrauenswürdig und seriös wirken und in deutscher Sprache sein.
+
+ZIEL:
+- Marketing-Website für eine Einzelanwältin (Spezialisierung: Familienrecht & Erbrecht) in einer deutschen Stadt Haßfurt.
+- Ziel: Mandantenanfragen über Kontaktformular und Telefonnummer erhöhen.
+- Besucher sollen schnell verstehen, bei welchen Themen die Anwältin hilft und warum sie vertrauenswürdig und kompetent ist.
+
+TECH-STACK:
+- React mit Next.js (aktuelle Version, App Router).
+- TypeScript.
+- Tailwind CSS für das Styling.
+- Kein Backend außer dem, was Next.js out-of-the-box mitbringt (Kontaktformular nur als Client-Side-Submit mit Platzhalter-API oder Mailto-Link).
+- Projektstruktur: saubere Trennung von components, app/pages, styles und lib/utils.
+- Linting mit ESLint und Prettier, sinnvolle Standard-Konfigurationen.
+
+SEITENSTRUKTUR:
+Implementiere mindestens folgende Routen / Seiten:
+- / (Startseite)
+- /leistungen (Überblick über Leistungen im Familienrecht & Erbrecht)
+- /familienrecht (Detailseite Familienrecht)
+- /erbrecht (Detailseite Erbrecht)
+- /kanzlei (Über die Kanzlei, Philosophie, Vorgehen)
+- /anwalt (Profil der Anwältin mit Lebenslauf, Qualifikationen, Mitgliedschaften)
+- /faq (häufige Fragen zu Familien- und Erbrecht)
+- /blog (Übersicht mit Beispiel-Artikeln; Posts können als statische Dummy-Daten angelegt werden)
+- /kontakt (Kontaktseite mit Formular, Kontaktdaten, Karte/Anfahrt)
+- /impressum
+- /datenschutz
+
+DESIGN & UX:
+- Modernes, aufgeräumtes Layout mit viel Weißraum, gut lesbarer Serif- oder Sans-Serif-Kombination.
+- Primär helles Design (Light Mode) mit einer Akzentfarbe (z.B. Dunkelblau oder Bordeaux) für Buttons, Links und wichtige Elemente.
+- Responsiv für Mobil, Tablet und Desktop (Mobile First).
+- Deutlich sichtbare Call-to-Actions: z.B. 'Termin vereinbaren', 'Jetzt Kontakt aufnehmen'.
+- Sticky Navigation am oberen Rand.
+- Hero-Sektion auf der Startseite mit klarer Headline, Subheadline und einem primären Call-to-Action-Button.
+- Abschnitte mit Karten/Boxen für die einzelnen Leistungsbereiche.
+- Sektion mit Vertrauenselementen: z.B. Mitgliedschaften, Fachanwaltschaften, Bewertungen (als Platzhalter).
+- Sauberes, konsistentes Spacing und ein einheitliches Komponenten-Design.
+
+INHALTE (TEXT & STRUKTUR):
+- Alle Texte auf Deutsch, in sachlicher, verständlicher und seriöser Sprache (kein Marketing-Bullshit).
+- Zielgruppe: Ratsuchende in schwierigen familiären Situationen oder mit Fragen zur Erbfolge.
+- Familienrecht: Themen wie Trennung, Scheidung, Unterhalt, Sorgerecht, Umgangsrecht, Zugewinnausgleich.
+- Erbrecht: Testament, gesetzliche Erbfolge, Pflichtteil, Erbengemeinschaft, Nachlassauseinandersetzung.
+- Auf jeder Leistungsseite kurzer Einleitungstext, Bullet-Point-Übersicht der typischen Mandate und ein CTA am Ende.
+- Auf der /anwalt-Seite: strukturierter Lebenslauf-Bereich (Ausbildung, Berufserfahrung, Fortbildungen), Werte und Arbeitsweise.
+- Auf /kanzlei: Darstellung von Kanzleiphilosophie, Ablauf der Mandatsaufnahme, Hinweise zu Kosten/Erstberatung.
+- FAQ-Seite mit typischen Fragen (z.B. 'Was kostet eine Erstberatung?', 'Welche Unterlagen sollte ich mitbringen?', 'Wann brauche ich einen Anwalt im Erbrecht?').
+
+KOMPONENTEN:
+Implementiere wiederverwendbare React-Komponenten, z.B.:
+- Layout-Komponente mit Header, Footer und Meta-Tags.
+- Navigationsleiste mit aktivem Menüpunkt.
+- HeroSection
+- Section / Card-Komponenten für Leistungsübersichten.
+- AttorneyProfile
+- FAQAccordion (aufklappbare Fragen)
+- BlogPostList und BlogPostCard (Dummy-Daten reichen).
+- Kontaktformular-Komponente mit Validierung.
+- Button- und Link-Komponenten mit konsistenten Styles.
+
+KONTAKTFORMULAR:
+- Auf /kontakt ein Formular mit Feldern: Name, E-Mail, Telefonnummer, Betreff, Nachricht, Datenschutz-Checkbox.
+- Client-side Validierung mit klaren Fehlermeldungen.
+- Vorläufiger Submit-Handler, der nur im Frontend arbeitet (z.B. Console-Log oder Hinweis 'Versand-Demo – hier würde die Anfrage gesendet werden.').
+- Alle Formularlabels mit 'for' / 'id' verknüpft (Zugänglichkeit).
+
+SEO & PERFORMANCE:
+- Sinnvolle <title> und <meta description> je Seite, auf Deutsch.
+- Open-Graph Meta Tags auf der Startseite.
+- JSON-LD Structured Data für eine lokale 'LegalService' / 'LocalBusiness' (Name der Kanzlei als Platzhalter, Adresse als Dummy).
+- Saubere Heading-Hierarchie (nur ein <h1> pro Seite).
+- Bilder als Next.js Image-Komponente mit sinnvollen Alt-Texten (Platzhalterbilder verwenden).
+- Performance beachten: keine unnötig großen Bilder, Komponenten sinnvoll splitten.
+
+ACCESSIBILITY:
+- ARIA-Attribute, wo nötig (z.B. für das FAQ-Accordion).
+- Kontraste ausreichend hoch.
+- Fokuszustände für Links und Buttons deutlich sichtbar.
+- Navigation per Tastatur möglich.
+
+CODEQUALITÄT:
+- TypeScript strikt nutzen, keine any-Typen ohne Grund.
+- Klare Ordnerstruktur: app (oder pages), components, lib, styles.
+- Kommentare, wo komplexere Logik entsteht.
+- ESLint- und Prettier-Konfiguration im Projekt anlegen.
+- README.md erstellen, das kurz erklärt: Projektziel, Tech-Stack, wie man das Projekt lokal startet (npm install, npm run dev).
+
+ZIEL:
+Am Ende soll ein lauffähiges Next.js-Projekt entstehen, das ich mit 'npm install' und 'npm run dev' starten kann und das eine vollständige, gut strukturierte, moderne Website für eine Anwältin für Familienrecht und Erbrecht in deutscher Sprache bereitstellt."
+
+
+UI/UX Update:
+
+codex /improve "Verbessere das bestehende Next.js-/TypeScript-/Tailwind-Projekt der Anwaltskanzlei systematisch im Hinblick auf UI/UX und visuelles Design, ohne Logik oder Seitenstruktur zu zerstören.
+
+ZIELE:
+- Die Seite soll wie eine moderne, preisgekrönte Kanzlei-Website wirken (orientiere dich stilistisch an aktuellen Award-Sites und Best-Practice-Beispielen für Law-Firm-Webdesign).
+- Fokus auf Klarheit, Vertrauen, Lesbarkeit und Conversion (Kontaktaufnahme/Termin).
+- Responsives, sehr aufgeräumtes Layout mit Tiefe und Layering statt flachem 08/15-Design.
+
+LAYOUT & LAYERING:
+- Verwende ein zentriertes max-width-Layout (z.B. max-w-6xl oder max-w-7xl, mx-auto, px-4/px-6) und eine konsistente Spacing-Skala (z.B. 4, 6, 8, 12).
+- Baue klare Sektionen mit großzügigem vertical spacing (py-12/py-16) und gut erkennbaren Section-Headlines.
+- Nutze sanftes Layering: z.B. dezente Hintergrundverläufe oder -texturen auf Body-Ebene und davor „schwebende“ Karten (bg-white/80, backdrop-blur, shadow-lg, rounded-2xl).
+- Erzeuge visuelle Hierarchie durch unterschiedliche Hintergrundtöne pro Abschnitt (abwechselnd white, slate-50/100), damit der Nutzer den Seitenfluss intuitiv versteht.
+
+NAVIGATION & HEADER:
+- Implementiere eine sticky Top-Navigation mit klarer Markenfläche links (Kanzleiname/Logo) und primären Links rechts.
+- Desktop: horizontale Navigation, klarer „Termin vereinbaren“ bzw. „Kontakt“ Button als Primary CTA.
+- Mobile: Burger-Menü mit Overlay/Sheet, große tappbare Links, CTA oben im Menü.
+
+HERO-BEREICH:
+- Auf der Startseite: zweispaltiger Hero (Text links, visuelles Element oder vertrauensbildende Boxen rechts).
+- Headline klar und reduziert („Rechtsanwältin für Familien- und Erbrecht in Haßfurt“), Subheadline mit Nutzenversprechen.
+- Zwei CTAs: Primary („Termin vereinbaren“) und Secondary („Rückruf anfordern“ oder „Leistungen ansehen“).
+- Ergänze Key-Trust-Elemente im Hero: z.B. kleine Karten mit „X Jahre Erfahrung“, „Mitglied in …“, „Mandantenbewertungen (Platzhalter)“.
+
+CARDS / CONTAINER:
+- Gestalte Karten für Leistungsübersichten, FAQs und Blog-Teaser konsistent:
+  - abgerundete Ecken (rounded-xl oder rounded-2xl), großzügiges padding, klarer Titel, kurze Beschreibung, optional Icon oben.
+  - Nutze leichtes Glassmorphism-/Soft-UI-Feeling: z.B. bg-white/80, border border-white/40, shadow-md, leichte translate-y-1/hover:translate-y-0 mit transition.
+- Verwende „Bento“-artige Grids für kombinierte Inhalte (z.B. 2x2 Karten mit unterschiedlichen Höhen) für mehr Dynamik, aber achte auf einfache Lesbarkeit.
+
+BUTTONS & CTAs:
+- Definiere wiederverwendbare Button-Komponenten (Primary, Secondary, Tertiary) mit Tailwind-Klassen:
+  - Primary: hoher Kontrast (z.B. bg-indigo-700 text-white, hover:bg-indigo-800, focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500), min-height ca. 48px (h-12), großzügige horizontale Padding (px-6), rounded-full oder rounded-xl.
+  - Secondary: transparente/outline-Variante mit Border in der Akzentfarbe, gleicher Padding/Höhe wie Primary.
+- Stelle sicher, dass Buttons klar als klickbar erkennbar sind, deutliche Hover-, Focus- und Active-States besitzen und bezüglich Größe und Kontrast WCAG-konform sind.
+- Benutze handlungsorientierte Texte („Jetzt Beratung anfragen“, „Rückruf vereinbaren“, „Kostenlose Ersteinschätzung sichern“) statt generischer Labels.
+
+TYPOGRAFIE & LESBARKEIT:
+- Richte ein klares Typo-System ein (z.B. moderne Sans-Serif für Fließtext, leicht charakterstarke Serif oder kräftige Sans für Headlines).
+- Definiere ein konsistentes Scale-System für Überschriften (z.B. h1, h2, h3 mit klaren Tailwind text- Klassen) und nutze max-width für Fließtexte (prose oder max-w-3xl) für gute Lesbarkeit.
+- Achte auf ausreichenden Zeilenabstand und Kontrast (mind. WCAG AA).
+
+MICROINTERACTIONS:
+- Nutze dezente Hover-Animationen für Karten und Buttons (scale-105, translate-y-1, shadow-lg), aber niemals übertrieben.
+- Setze Smooth-Scrolling und sanfte Section-Transitions ein, wo sinnvoll, ohne die Performance zu gefährden.
+
+FORMULARE & UX:
+- Überarbeite das Kontaktformular visuell:
+  - Klare, beschriftete Felder mit Labels oberhalb, ausreichend Abstand, sinnvolle Placeholder.
+  - Einheitliche Input-Styles (rounded-lg, border-slate-300, focus:border-indigo-500, focus:ring-1 focus:ring-indigo-500).
+  - Gut sichtbare Fehlermeldungen und Success-Meldung.
+- CTA-Bereich unterhalb des Formulars, der Vertrauen schafft (Hinweis zum Umgang mit Daten, DSGVO, Verschwiegenheitspflicht).
+
+ACCESSIBILITY:
+- Stelle ausreichende Kontraste sicher (Text/Button vor Hintergrund).
+- Implementiere sichtbare Focus-Ringe, gerade bei Navigation, Buttons und Formularfeldern.
+- Prüfe ARIA-Attribute für Navigation, FAQ-Accordion und andere interaktive Komponenten.
+- Nur ein h1 pro Seite, logische Überschriften-Hierarchie und sinnvolle alt-Texte für alle Bilder.
+
+WICHTIG:
+- Implementiere alle Anpassungen direkt in den bestehenden Komponenten (Layout, Navigation, Hero, Service-Karten, FAQ, Blog-Teaser, Kontaktformular), ohne die Routing-Struktur oder Business-Logik der App zu verändern.
+- Schreibe den Code weiterhin in sauberem TypeScript und nutze wiederverwendbare UI-Komponenten (z.B. Button, Card, Section, Container), um das Design konsistent im gesamten Projekt zu machen."
