@@ -44,6 +44,16 @@
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
+  .reveal-up {
+    transform: translateY(28px);
+    opacity: 0;
+    transition: transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 420ms ease-out;
+  }
+  .reveal-up.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
   .prose-legal h2 { @apply text-xl font-semibold mt-8 mb-4; }
   .prose-legal h3 { @apply text-lg font-semibold mt-6 mb-3; }
   .prose-legal p { @apply mb-4 leading-relaxed; }

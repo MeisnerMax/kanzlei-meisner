@@ -7,20 +7,31 @@ type Item = { href: string; label: string };
 
 export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentPath: string }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!open) return;
+    if (!mounted) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && handleClose();
     window.addEventListener("keydown", onKey);
     panelRef.current?.focus();
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [open]);
+  }, [mounted]);
+
+  const handleOpen = () => {
+    setMounted(true);
+    requestAnimationFrame(() => setOpen(true));
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setTimeout(() => setMounted(false), 260);
+  };
 
   return (
     <>
@@ -28,19 +39,25 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
         aria-label="Mobiles Menü öffnen"
         aria-haspopup="dialog"
         aria-expanded={open}
-        onClick={() => setOpen(true)}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600"
+        onClick={handleOpen}
+        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
       >
-        <span aria-hidden className="text-xl">☰</span>
+        <svg aria-hidden viewBox="0 0 24 24" className="h-6 w-6">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        </svg>
       </button>
 
-      {open && (
-        <div className="fixed inset-0 z-[60] flex" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
-          <div className="absolute inset-0 bg-black" aria-hidden onClick={() => setOpen(false)} />
+      {mounted && (
+        <div className="fixed inset-0 z-[60] flex bg-[#031a38]" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+          <div
+            className={`absolute inset-0 bg-[#031a38] transition-opacity duration-250 ${open ? "opacity-100" : "opacity-0"}`}
+            aria-hidden
+            onClick={handleClose}
+          />
           <div
             ref={panelRef}
             tabIndex={-1}
-            className="relative ml-auto h-full w-[85%] max-w-sm bg-[#051323] text-white shadow-2xl border border-white/10 px-6 py-6 flex flex-col gap-6 animate-slide-in focus:outline-none"
+            className={`relative ml-auto flex h-full w-[85%] max-w-sm flex-col gap-6 border border-white/10 bg-[#06284d] px-6 py-6 text-white shadow-2xl duration-250 ease-out transition-all ${open ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"}`}
           >
             <div className="flex items-center justify-between">
               <h2 id="mobile-menu-title" className="font-serif text-xl font-semibold text-white tracking-tight">
@@ -48,31 +65,39 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
               </h2>
               <button
                 aria-label="Menü schließen"
-                onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600"
+                onClick={handleClose}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
               >
-                ✕
+                <svg aria-hidden viewBox="0 0 24 24" className="h-6 w-6">
+                  <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                </svg>
               </button>
             </div>
 
-            <Link href="/kontakt" onClick={() => setOpen(false)}>
-              <Button size="md" className="w-full">Jetzt Beratung anfragen</Button>
+            <Link href="/kontakt" onClick={handleClose}>
+              <Button size="md" variant="secondary" className="w-full !bg-white !text-[#0a2240] !hover:bg-white/90 !border-0">
+                Jetzt Beratung anfragen
+              </Button>
             </Link>
 
-            <nav className="mt-2 grid gap-2" aria-label="Mobiles Hauptmenü">
+            <nav className="mt-2 grid gap-3" aria-label="Mobiles Hauptmenü">
               {nav.map((n) => (
                 <Link
                   key={n.href}
                   href={n.href as any}
-                  onClick={() => setOpen(false)}
-                  className={`no-underline rounded-lg px-3 py-3 text-lg ${currentPath === n.href ? "bg-primary-50 text-primary-700" : "text-white hover:bg-gray-100"}`}
+                  onClick={handleClose}
+                  className={`no-underline rounded-xl px-4 py-3 text-lg border transition ${
+                    currentPath === n.href
+                      ? "bg-white text-[#0b2443] border-white shadow-soft"
+                      : "text-white/90 border-white/5 bg-white/5 hover:border-white/20 hover:bg-white/10"
+                  }`}
                 >
                   {n.href === "/anwalt" ? "Meisner" : n.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="mt-auto pt-4 border-t border-white/10 text-sm text-white/60">
+            <div className="mt-auto border-t border-white/10 pt-4 text-sm text-white/60">
               © {new Date().getFullYear()} Volljuristin Meisner in der Kanzlei Haßfurt Fischer
             </div>
           </div>
@@ -80,10 +105,8 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
       )}
 
       <style jsx>{`
-        .animate-slide-in { animation: slideIn 0.28s ease-out; }
-        @keyframes slideIn { 0% { transform: translateX(100%);} 100% { transform: translateX(0);} }
+        .duration-250 { transition-duration: 250ms; }
       `}</style>
     </>
   );
 }
-

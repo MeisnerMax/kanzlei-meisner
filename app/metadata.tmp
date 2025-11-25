@@ -1,0 +1,15 @@
+export const metadata: Metadata = {
+  title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
+  description:
+    "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+  openGraph: {
+    title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
+    description:
+      "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+    type: "website",
+    url: "https://example.com/",
+    images: [
+      { url: "/hero-illustration.svg", width: 1200, height: 630, alt: "Kanzlei Haßfurt Fischer" }
+    ]
+  }
+};

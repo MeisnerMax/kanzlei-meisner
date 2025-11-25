@@ -97,48 +97,17 @@ Folgende Schwerpunkte integrieren:
   Subheadline: **Volljuristin & Mediatorin für Familien-, Erb- und Zivilrecht**  
 • CTA bleibt: „Jetzt Beratung anfragen“
 
-────────────────────────────────────────
-6) SCHWERPUNKTE / CARDS
-────────────────────────────────────────
-• Die Schwerpunkt-Kästchen farblich deutlich hervorheben:  
-  – heller Hintergrund (z.B. #f5f7fa)  
-  – feine Border (#d9e1ec)  
-  – tieferes Blau für Titel, dunkles Grau für Text  
-• Animation: Soft Slide-Up beim Scrollen.  
-• Weniger Transparenz, weniger Fade, mehr Klarheit.  
 
-────────────────────────────────────────
-7) MOBILE MENU
-────────────────────────────────────────
+• Die Schwerpunkt-Kästchen farblich deutlich hervorheben:  
+  – heller Hintergrund
+  – feine Border 
+  – tieferes Blau für Titel, dunkles Grau für Text  
+• Animation: Soft Slide-Up beim Scrollen.   
 • Drawer mit **fester blauer Hintergrundfarbe**  
-• Menü-Links weiß, große Tappflächen, moderne Typografie  
-• Keine halbtransparenten Overlays  
 • Animation: Slide-In von rechts, Fade-Out beim Schließen  
 • Mobile-First Layout priorisieren  
-
-────────────────────────────────────────
-8) DATEIEN & ASSETS
-────────────────────────────────────────
-• Header-Bild (Logo/Portrait) → `.png`, nicht `.svg`.  
 • Stelle sicher, dass alle Komponenten und Seiten mobile-first gestaltet sind.  
-• Konsistenz der Farben im gesamten Projekt herstellen:  
-  - `primary`: tiefes, seriöses Blau  
-  - `accent`: Weiß / Off-White  
-
-────────────────────────────────────────
-9) TECHNISCHE ANFORDERUNGEN
-────────────────────────────────────────
 • Jede Seite und jeder Container erhält einen Fade-In/Slide-Up beim Scrollen:  
   – IntersectionObserver oder Framer Motion (Lottie optional).  
-• Keine Zerstörung der bestehenden Routing-Struktur.  
-• Code bleibt in TypeScript, sauber formatiert.  
-• Konsistente Tailwind-Klassen, keine Inline-Stile.  
-• Alle Texte neu generieren, professionell, seriös, sachlich.  
 
-────────────────────────────────────────
-ZIEL
-────────────────────────────────────────
-Ein vollständig aktualisiertes Webprojekt der „Volljuristin Meisner in der Kanzlei Fischer (Haßfurt & Ebern)“  
-mit optimiertem UX/UI-Design, moderner mobiler Navigation, angepassten Farben, neuen Berufsdaten, neuer Informationsseite  
-für das Medizinrecht, ersetzter Terminologie („Volljuristin“ statt „Anwältin“) und durchgängig verbessertem  
-professionellen Kanzlei-Auftreten.
+Verbessere das design der Website grundlegend für einen modernen look. prüfe lesbarkeit von texten/containern. prüfe jede seite auf mobile first.

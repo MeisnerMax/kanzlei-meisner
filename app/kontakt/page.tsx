@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontakt zur Kanzlei Haßfurt Fischer: Termin vereinbaren oder Anliegen schildern – telefonisch, per E-Mail oder über das Kontaktformular (Standorte Haßfurt und Ebern)."
+    "Kontakt zur Kanzlei Fischer in Haßfurt und Ebern: Termin vereinbaren oder Anliegen schildern – telefonisch, per E-Mail oder über das Kontaktformular."
 };
 
 export default function Page() {
@@ -17,15 +17,18 @@ export default function Page() {
         </div>
         <div className="space-y-3 text-white/80">
           <p>
-            Telefon: <a className="no-underline" href="tel:+499512000000">+49 9512 000000</a>
+            Telefon: <a className="no-underline" href="tel:+499521950460">09521 - 950 460</a>
           </p>
           <p>
-            E-Mail: <a className="no-underline" href="mailto:kanzlei@example.com">kanzlei@example.com</a>
+            Fax: <span className="no-underline">09521 - 950 461</span>
           </p>
-            <p>Adresse: Musterstraße 12, 97437 Haßfurt</p>
+          <p>
+            E-Mail: <a className="no-underline" href="mailto:anwaltskanzlei-fischer@t-online.de">anwaltskanzlei-fischer@t-online.de</a>
+          </p>
+          <p>Adresse: Schlesingerstr. 26, 97437 Haßfurt</p>
           <div className="rounded-lg border border-white/15 p-3 bg-white/5 text-sm text-white/80">
             <p className="font-medium text-white">Anfahrt</p>
-            <p className="text-white/80">ÖPNV: Linie X, Haltestelle Musterplatz. Parken in der Nähe möglich.</p>
+            <p className="text-white/80">ÖPNV und Parken in der Nähe möglich. Termine nach Vereinbarung.</p>
             <div className="mt-3 h-56 w-full overflow-hidden rounded-md">
               <iframe
                 title="Karte: Volljuristin Meisner in der Kanzlei Haßfurt Fischer"
@@ -40,7 +43,8 @@ export default function Page() {
           </div>
           <div className="rounded-lg border border-white/15 p-3 bg-white/5 text-sm text-white/80">
             <p className="font-medium text-white">Bürozeiten</p>
-            <p className="text-white/80">Mo–Fr 9:00–17:00 Uhr – Termine nach Vereinbarung.</p>
+            <p className="text-white/80">Mo – Fr: 08:00 – 12:00 | Mo – Do: 13:00 – 17:00</p>
+            <p className="text-white/80">Sprechstunde nach Vereinbarung.</p>
           </div>
         </div>
       </div>

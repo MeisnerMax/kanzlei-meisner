@@ -8,13 +8,13 @@ import Card from "@/components/Card";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Volljuristin Meisner – Kanzlei Haßfurt Fischer",
+  title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
   description:
-    "Beratung in Familien- und Erbrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+    "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
   openGraph: {
-    title: "Volljuristin Meisner – Kanzlei Haßfurt Fischer",
+    title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
     description:
-      "Beratung in Familien- und Erbrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+      "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
     type: "website",
     url: "https://example.com/",
     images: [
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     ]
   }
 };
+
 
 export default function Page() {
   return (
@@ -47,7 +48,7 @@ export default function Page() {
         }}
       />
       <HeroSection />
-      <Section variant="pattern" title="Schwerpunkte" intro="Kompetente Unterstützung im Familien- und Erbrecht." align="center">
+      <Section variant="pattern" title="Schwerpunkte" intro="Kompetente Unterstützung im Familien-, Erb- und Zivilrecht." align="center">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <Card
             title="Trennung & Scheidung"
@@ -83,17 +84,17 @@ export default function Page() {
       </Section>
       <Section variant="contrast" title="Warum Kanzlei Meisner?" align="center">
         <div className="grid gap-8 sm:grid-cols-3">
-          <div className="rounded-2xl border border-gray-200 p-6 md:p-8 bg-white shadow-soft">
-            <h3 className="font-semibold text-gray-900">Spezialisierung</h3>
-            <p className="mt-3 text-gray-700 leading-relaxed">Fokus auf Familienrecht und Erbrecht – täglich gelebte Praxis.</p>
+          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 md:p-8 shadow-soft">
+            <h3 className="font-semibold text-white">Spezialisierung</h3>
+            <p className="mt-3 text-white/80 leading-relaxed">Fokus auf Familien-, Erb- und Zivilrecht – täglich gelebte Praxis.</p>
           </div>
-          <div className="rounded-2xl border border-gray-200 p-6 md:p-8 bg-white shadow-soft">
-            <h3 className="font-semibold text-gray-900">Verlässlichkeit</h3>
-            <p className="mt-3 text-gray-700 leading-relaxed">Klare Einschätzungen, transparente Kommunikation, strukturierter Ablauf.</p>
+          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 md:p-8 shadow-soft">
+            <h3 className="font-semibold text-white">Verlässlichkeit</h3>
+            <p className="mt-3 text-white/80 leading-relaxed">Klare Einschätzungen, transparente Kommunikation, strukturierter Ablauf.</p>
           </div>
-          <div className="rounded-2xl border border-gray-200 p-6 md:p-8 bg-white shadow-soft">
-            <h3 className="font-semibold text-gray-900">Nähe</h3>
-            <p className="mt-3 text-gray-700 leading-relaxed">Persönlich erreichbar in Haßfurt – vor Ort und digital.</p>
+          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 md:p-8 shadow-soft">
+            <h3 className="font-semibold text-white">Nähe</h3>
+            <p className="mt-3 text-white/80 leading-relaxed">Persönlich erreichbar in Haßfurt – vor Ort und digital.</p>
           </div>
         </div>
         <div className="mt-8">
@@ -105,3 +106,9 @@ export default function Page() {
     </>
   );
 }
+
+
+
+
+
+
