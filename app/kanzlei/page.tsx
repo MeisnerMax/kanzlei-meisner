@@ -1,10 +1,12 @@
 import Section from "@/components/Section";
+import Link from "next/link";
+import Button from "@/components/Button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kanzlei",
   description:
-    "Kanzleiphilosophie, Mandatsaufnahme, Kontakt und Öffnungszeiten – Volljuristin Meisner in der Kanzlei Fischer (Standorte Haßfurt und Ebern)."
+    "Kanzleiphilosophie, Mandatsaufnahme, Kontakt und Öffnungszeiten - Volljuristin Meisner in der Kanzlei Fischer (Standorte Haßfurt und Ebern)."
 };
 
 export default function Page() {
@@ -14,7 +16,7 @@ export default function Page() {
         variant="contrast"
         as="h1"
         title="Kanzleiphilosophie"
-        intro="Sachlich, klar, verlässlich. Wir arbeiten lösungsorientiert – mit Augenmaß, solider Dokumentation und konsequenter Fristenkontrolle."
+        intro="Sachlich, klar, verlässlich. Wir arbeiten lösungsorientiert - mit Augenmaß, solider Dokumentation und konsequenter Fristenkontrolle."
       >
         <div className="grid gap-6 sm:grid-cols-3">
           <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
@@ -27,7 +29,7 @@ export default function Page() {
           </div>
           <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
             <h3 className="font-semibold text-white">Nähe</h3>
-            <p className="mt-2 text-white/80">Persönlich erreichbar in Haßfurt und Ebern – vor Ort oder digital.</p>
+            <p className="mt-2 text-white/80">Persönlich erreichbar in Haßfurt und Ebern - vor Ort oder digital.</p>
           </div>
         </div>
       </Section>
@@ -66,6 +68,15 @@ export default function Page() {
         <p className="text-white/80">
           Die Vergütung richtet sich regelmäßig nach dem Rechtsanwaltsvergütungsgesetz (RVG). Bei außergerichtlichen Mandaten sind Vergütungsvereinbarungen möglich. Sie erhalten vorab eine klare Einschätzung und Transparenz über Aufwand, Fristen und nächste Schritte.
         </p>
+      </Section>
+
+      <Section variant="contrast" align="center" title="Nächster Schritt">
+        <div className="max-w-2xl mx-auto space-y-4 text-white/85">
+          <p>Wir besprechen kurz Ihr Anliegen und vereinbaren den passenden Termin – vor Ort oder digital.</p>
+          <Link href="/kontakt" className="no-underline inline-flex">
+            <Button size="lg">Kontakt aufnehmen</Button>
+          </Link>
+        </div>
       </Section>
     </>
   );

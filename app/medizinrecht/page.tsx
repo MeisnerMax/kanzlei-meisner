@@ -4,10 +4,58 @@ import Section from "@/components/Section";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 
+const iconClass = "h-10 w-10 text-primary-300";
+
+const IconCross = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M12 4v16M4 12h16" />
+    <circle cx="12" cy="12" r="9" />
+  </svg>
+);
+
+const IconClipboard = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="6" y="5" width="12" height="14" rx="2" />
+    <path d="M9 5V3h6v2M9 9h6M9 12h6M9 15h4" />
+  </svg>
+);
+
+const IconShield = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M12 21c5-2.5 8-5.5 8-10V6.5L12 3 4 6.5V11c0 4.5 3 7.5 8 10Z" />
+    <path d="m9.5 12.5 1.5 1.5 3.5-4" />
+  </svg>
+);
+
+const IconPeople = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <circle cx="8" cy="7" r="2.7" />
+    <circle cx="16" cy="9" r="2.7" />
+    <path d="M4 18c0-2.2 1.8-4 4-4h1c2.2 0 4 1.8 4 4" />
+    <path d="M12 17c.5-.6 1.3-1 2.2-1H16c1.9 0 3.5 1.6 3.5 3.5" />
+  </svg>
+);
+
+const IconContract = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="5" y="3" width="10" height="18" rx="2" />
+    <path d="M9 7h4M9 11h4M9 15h2" />
+    <path d="m15 8 4 4-4 4" />
+  </svg>
+);
+
+const IconMoney = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="3" y="7" width="18" height="10" rx="2" />
+    <path d="M7 12h10" />
+    <path d="M7 9h0.01M17 15h0.01" />
+  </svg>
+);
+
 export const metadata: Metadata = {
   title: "Medizinrecht",
   description:
-    "Medizinrechtliche Beratung, Konfliktlösung im Gesundheitswesen und Vertretung in medizinrechtlichen Streitigkeiten – mit direkter Verbindung zum Arbeitskreis Medizinrecht."
+    "Medizinrechtliche Beratung, Konfliktlösung im Gesundheitswesen und Vertretung in medizinrechtlichen Streitigkeiten - mit direkter Verbindung zum Arbeitskreis Medizinrecht."
 };
 
 export default function Page() {
@@ -17,28 +65,26 @@ export default function Page() {
         variant="subtle"
         as="h1"
         title="Medizinrecht"
-        intro="Medizinrechtliche Beratung mit klarem Prozess: Dokumentation sichern, medizinische Fragen präzise stellen, Ergebnisse konsequent durchsetzen."
+        intro="Dokumentation sichern, medizinische Fragen präzise stellen, Ergebnisse konsequent durchsetzen."
       >
-        <div className="grid items-start gap-10 xl:gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="space-y-5 text-white/85 leading-relaxed">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
+          <div className="space-y-6 text-white/85 leading-relaxed">
             <p>
-              Ob Behandlungsfehler, unvollständige Aufklärung oder Streit um Gutachten – ich steuere den Ablauf, halte medizinische Details verständlich und bereite Fristen, Nachfragen und Vergleiche sauber vor.
+              Ob Behandlungsfehler, unvollständige Aufklärung oder Streit um Gutachten: Ich halte medizinische Details verständlich,
+              sichere Fristen und bereite Vergleich oder Klage strukturiert vor.
             </p>
-            <p>
-              Die Verbindung zum Arbeitskreis Medizinrecht sichert aktuelle Entwicklungen und belastbare Argumentation. Berufserfahrung und Netzwerke werden für Ihr Verfahren direkt nutzbar gemacht.
-            </p>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="flex min-h-[140px] flex-col gap-1.5 rounded-xl border border-[#1f3358] bg-[#0f1e35] px-4 py-4">
-                <h3 className="text-white font-semibold">Medizinrechtliche Beratung</h3>
-                <p className="text-sm text-white/70">Sachverhaltsanalyse, Aufklärungspflichten, Dokumentationssicherung.</p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
+                <h3 className="text-white font-semibold">Dokumentation</h3>
+                <p className="text-sm text-white/70">Befunde, Aufklärung und Verläufe sichern, Lücken sichtbar machen.</p>
               </div>
-              <div className="flex min-h-[140px] flex-col gap-1.5 rounded-xl border border-[#1f3358] bg-[#0f1e35] px-4 py-4">
-                <h3 className="text-white font-semibold">Konfliktlösung</h3>
-                <p className="text-sm text-white/70">Gutachten steuern, Vergleichsoptionen prüfen, Mediation oder Prozess klar vorbereiten.</p>
+              <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
+                <h3 className="text-white font-semibold">Gutachten steuern</h3>
+                <p className="text-sm text-white/70">Fragenkataloge präzisieren, Zweitmeinungen und Vergleichsoptionen prüfen.</p>
               </div>
-              <div className="flex flex-col gap-1.5 rounded-xl border border-[#1f3358] bg-[#0f1e35] px-4 py-4 sm:col-span-2 lg:col-span-3">
-                <h3 className="text-white font-semibold">Rechtsvertretung</h3>
-                <p className="text-sm text-white/70">Streitigkeiten im Medizinrecht – mit 30+ Jahren Erfahrung und Vorsitz im Arbeitskreis Medizinrecht.</p>
+              <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
+                <h3 className="text-white font-semibold">Durchsetzen</h3>
+                <p className="text-sm text-white/70">Ansprüche beziffern, Versicherer einbinden, gerichtliche Schritte vorbereiten.</p>
               </div>
             </div>
           </div>
@@ -49,20 +95,20 @@ export default function Page() {
             </div>
             <h3 className="font-serif text-2xl font-semibold text-white">Erstkontakt im Medizinrecht</h3>
             <p className="text-white/80">
-              Wir sichten Unterlagen, klären Fristen und entwickeln einen Fahrplan – vom Gutachtenauftrag bis zur Anspruchsdurchsetzung.
+              Unterlagen sichten, Fristen klären, Fahrplan erstellen: Gutachtenauftrag, Vergleich oder konsequente Anspruchsdurchsetzung.
             </p>
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Strukturierte Sichtung von Behandlungsunterlagen und Dokumentation</span>
+                <span>Dokumentation und medizinische Fragen strukturieren</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Abstimmung mit Haftpflichtversicherern und Medizin-Sachverständigen</span>
+                <span>Abstimmung mit Versicherern und Sachverständigen</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Klare Strategie für Vergleich, Mediation oder gerichtliche Durchsetzung</span>
+                <span>Strategie für Vergleich, Mediation oder gerichtliche Durchsetzung</span>
               </li>
             </ul>
             <div>
@@ -78,55 +124,70 @@ export default function Page() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Card
             title="Behandlungsfehler & Arzthaftung"
-            text="Prüfung von Diagnose- und Behandlungsfehlern, Aufklärungsdokumentation und Haftungsvoraussetzungen."
+            text="Diagnose- und Behandlungsfehler prüfen, Aufklärung und Dokumentation sichern."
+            icon={<IconCross />}
           />
           <Card
             title="Gutachten & Zweitmeinungen"
-            text="Begleitung von Gutachten, strukturierte Fragenkataloge, Einholung von Zweitgutachten."
+            text="Fragenkataloge entwickeln, Zweitgutachten einholen, Ergebnisse einordnen."
+            icon={<IconClipboard />}
           />
           <Card
             title="Schmerzensgeld & Schadensersatz"
-            text="Geltendmachung materieller und immaterieller Schäden, Renten- und Zukunftsschäden realistisch kalkulieren."
+            text="Materielle und immaterielle Schäden realistisch beziffern und durchsetzen."
+            icon={<IconMoney />}
           />
           <Card
             title="Patientenrechte & Einsicht"
-            text="Einsicht in Behandlungsunterlagen, Schweigepflichtsentbindung, Datenschutz und Dokumentationspflichten."
+            text="Einsicht, Schweigepflicht, Datenschutz und Dokumentationspflichten klären."
+            icon={<IconShield />}
           />
           <Card
             title="Praxis & Vertrag"
-            text="Praxisübernahme, Kooperationen, Honorarvereinbarungen sowie Haftung bei Delegation und Organisation."
+            text="Praxisübernahme, Kooperationen, Haftung bei Delegation und Organisation."
+            icon={<IconContract />}
           />
           <Card
             title="Versicherungen & Kostenträger"
             text="Abstimmung mit Haftpflicht- und Krankenversicherern, Regress und Erstattungsansprüche."
+            icon={<IconPeople />}
           />
         </div>
       </Section>
 
       <Section
         variant="contrast"
-        title="Komplexe aus der Berufserfahrung"
-        intro="Fallgestaltungen, die besondere Tiefe erfordern – mit sauberer Vorbereitung und klaren Prioritäten."
+        title="Typische Situationen"
+        intro="Erfahrung aus langjähriger Praxis und Netzwerk im Arbeitskreis Medizinrecht."
       >
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Langwierige Arzthaftungsverfahren</h3>
+            <h3 className="font-semibold text-white">Langwierige Verfahren</h3>
             <p className="mt-3 text-white/80 leading-relaxed">
-              Steuerung mehrjähriger Verfahren mit mehreren Gutachten, engen Fristen und parallelen Vergleichsverhandlungen.
+              Mehrere Gutachten, enge Fristen und parallele Vergleichsverhandlungen strukturiert steuern.
             </p>
           </div>
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Geburtshilfliche und neurologische Schäden</h3>
+            <h3 className="font-semibold text-white">Geburtshilfe & Neurologie</h3>
             <p className="mt-3 text-white/80 leading-relaxed">
-              Aufarbeitung komplexer Medizin, Sicherung von Beweisen und Berechnung lebenslanger Bedarfe für Pflege und Therapie.
+              Komplexe Medizin aufarbeiten, Beweise sichern und langfristige Bedarfe berechnen.
             </p>
           </div>
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Organisations- und Aufklärungsmängel</h3>
+            <h3 className="font-semibold text-white">Organisationsmängel</h3>
             <p className="mt-3 text-white/80 leading-relaxed">
-              Dokumentationslücken, fehlerhafte Praxisabläufe oder fehlende Aufklärung konsequent sichtbar machen und rechtlich bewerten.
+              Dokumentationslücken, fehlerhafte Abläufe oder fehlende Aufklärung sichtbar machen und rechtlich bewerten.
             </p>
           </div>
+        </div>
+      </Section>
+
+      <Section variant="contrast" align="center" title="Nächster Schritt">
+        <div className="max-w-2xl mx-auto space-y-4 text-white/85">
+          <p>Wir sichten Ihre Unterlagen, sichern Fristen und legen den Fahrplan fest - Gutachten, Vergleich oder Klage.</p>
+          <Link href="/kontakt" className="no-underline inline-flex">
+            <Button size="lg">Kontakt aufnehmen</Button>
+          </Link>
         </div>
       </Section>
     </>

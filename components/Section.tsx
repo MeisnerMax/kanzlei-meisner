@@ -21,11 +21,11 @@ export default function Section({
   const wrapClasses = (() => {
     switch (variant) {
       case "subtle":
-        return "relative bg-white/5";
+        return "relative bg-[#081427]";
       case "muted":
-        return "relative bg-white/5";
+        return "relative bg-[#081427]";
       case "contrast":
-        return "relative bg-gradient-to-b from-white/10 to-transparent with-blob";
+        return "relative bg-gradient-to-b from-[#0b1c36] via-[#050c18] to-transparent with-blob";
       case "pattern":
         return "relative bg-transparent bg-grid/10";
       default:

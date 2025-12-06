@@ -27,6 +27,8 @@ export default function Footer() {
           <ul className="space-y-1 text-white/70">
             <li><Link href="/familienrecht" className="no-underline">Familienrecht</Link></li>
             <li><Link href="/erbrecht" className="no-underline">Erbrecht</Link></li>
+            <li><Link href="/mediation" className="no-underline">Mediation</Link></li>
+            <li><Link href="/zivilrecht" className="no-underline">Zivilrecht</Link></li>
             <li><Link href="/medizinrecht" className="no-underline">Medizinrecht</Link></li>
           </ul>
         </div>

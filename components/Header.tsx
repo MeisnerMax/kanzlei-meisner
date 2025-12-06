@@ -9,7 +9,9 @@ const nav = [
   { href: "/", label: "Start" },
   { href: "/familienrecht", label: "Familienrecht" },
   { href: "/erbrecht", label: "Erbrecht" },
+  { href: "/zivilrecht", label: "Zivilrecht" },
   { href: "/medizinrecht", label: "Medizinrecht" },
+  { href: "/mediation", label: "Mediation" },
   { href: "/kanzlei", label: "Kanzlei" },
   { href: "/anwalt", label: "Anwältin" },
   { href: "/kontakt", label: "Kontakt" }
@@ -18,7 +20,7 @@ const nav = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-[#031a38] border-b border-white/10 shadow-sm text-white">
+    <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#050d1a]/95 via-[#050915]/90 to-transparent backdrop-blur-sm border-b border-white/5 text-white">
       <div className="container-max h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 no-underline">
           <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">M</span>
@@ -43,7 +45,6 @@ export default function Header() {
     </header>
   );
 }
-
 
 
 

@@ -9,29 +9,48 @@ export default function AttorneyProfile() {
       <div>
         <h3 className="font-serif text-2xl font-semibold text-white">Volljuristin Meisner</h3>
         <p className="mt-2 text-white/80">
-          Volljuristin und Mediatorin, fokussiert auf Familien-, Erb- und Zivilrecht – mit über 30 Jahren Erfahrung in anspruchsvollen Verfahren und strukturierten Verhandlungen.
+          Volljuristin und Mediatorin, fokussiert auf Familien-, Erb- und Zivilrecht - mit über 30 Jahren Erfahrung in anspruchsvollen Verfahren und strukturierten Verhandlungen.
         </p>
-        <div className="mt-6 grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
-          <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-5 shadow-soft">
-            <h4 className="font-semibold text-white">Berufserfahrung</h4>
-            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1.35fr_0.9fr]">
+          <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-5 shadow-soft space-y-4">
+            <div className="flex items-start justify-between">
+              <h4 className="font-semibold text-white">Berufserfahrung</h4>
+              <span className="rounded-full bg-white/10 px-3 py-1 text-xs text-white/70">30+ Jahre</span>
+            </div>
+            <div className="space-y-3">
               <div className="rounded-lg border border-[#1f3358] bg-[#10253f] p-3">
-                <div className="text-sm text-white/60">aktuell</div>
+                <div className="text-sm text-white/60">seit 2025</div>
                 <div className="font-semibold text-white">Kanzlei Tilman Fischer</div>
-                <div className="text-sm text-white/70">11/2025 – Heute</div>
+                <div className="text-sm text-white/70">Familien-, Erb- und Zivilrecht</div>
               </div>
               <div className="rounded-lg border border-[#1f3358] bg-[#10253f] p-3">
                 <div className="text-sm text-white/60">Leitung</div>
                 <div className="font-semibold text-white">Vorsitzende Arbeitskreis Medizinrecht</div>
+                <div className="text-sm text-white/70">Aktuelle Entwicklungen im Medizinrecht</div>
+              </div>
+              <div className="grid gap-2 sm:grid-cols-2">
+                <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">
+                  <div className="text-sm text-white/60">2009 – heute</div>
+                  <div className="font-semibold text-white">Medizinrecht</div>
+                  <div className="text-sm text-white/70">Gutachten, Haftung, Vergleichsstrategien</div>
+                </div>
+                <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">
+                  <div className="text-sm text-white/60">2006 – heute</div>
+                  <div className="font-semibold text-white">Volljuristin & Mediatorin</div>
+                  <div className="text-sm text-white/70">Verhandlungen strukturieren</div>
+                </div>
+                <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">
+                  <div className="text-sm text-white/60">1994 – 2006</div>
+                  <div className="font-semibold text-white">Eigene Kanzlei</div>
+                  <div className="text-sm text-white/70">Familien- und Erbrecht</div>
+                </div>
+                <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">
+                  <div className="text-sm text-white/60">1989 – 1994</div>
+                  <div className="font-semibold text-white">EIPA Maastricht & Rechtsamt</div>
+                  <div className="text-sm text-white/70">Verwaltung & EU-Praxis</div>
+                </div>
               </div>
             </div>
-            <ul className="mt-4 space-y-2 text-white/80">
-              <li>Medizinrecht (Apr. 2009 – Heute · 16 Jahre 8 Monate)</li>
-              <li>Volljuristin, Mediatorin (Mai 2006 – Heute · 19 Jahre 7 Monate)</li>
-              <li>Inhaberin einer Rechtsanwaltskanzlei (Sept. 1994 – Apr. 2006 · 11 Jahre 8 Monate)</li>
-              <li>Rechtsamtsleiterin (1993 – 1994 · 1 Jahr 8 Monate)</li>
-              <li>Juristin am EIPA Maastricht (März 1989 – Aug. 1989 · 6 Monate)</li>
-            </ul>
           </div>
           <div className="grid gap-4">
             <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-soft">
@@ -45,7 +64,6 @@ export default function AttorneyProfile() {
             <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-soft">
               <h4 className="font-semibold text-white">Mitgliedschaften</h4>
               <ul className="mt-2 list-disc pl-5 text-white/80 space-y-1">
-                <li>Anwaltsverein</li>
                 <li>Arbeitsgemeinschaft Familien- und Erbrecht</li>
                 <li>Arbeitskreis Medizinrecht</li>
               </ul>

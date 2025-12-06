@@ -1,43 +1,149 @@
 import Section from "@/components/Section";
+import Card from "@/components/Card";
 import Link from "next/link";
 import Button from "@/components/Button";
 import type { Metadata } from "next";
 
+const iconClass = "h-10 w-10 text-primary-300";
+
+const IconDocument = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M7 3h7l4 4v14H7z" />
+    <path d="M14 3v5h5" />
+    <path d="M9 12h6M9 16h4" />
+  </svg>
+);
+
+const IconScale = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M12 3v18" />
+    <path d="M6 6h12" />
+    <path d="m7.5 6-3 7h6l-3-7Z" />
+    <path d="m19.5 6-3 7h6l-3-7Z" />
+    <path d="M3 13c0 2 2 4 4.5 4s4.5-2 4.5-4" />
+    <path d="M12 13c0 2 2 4 4.5 4s4.5-2 4.5-4" />
+  </svg>
+);
+
+const IconHome = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="m4 10 8-6 8 6" />
+    <path d="M6 9v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9" />
+    <path d="M10 19v-4h4v4" />
+  </svg>
+);
+
+const IconShield = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M12 21c5-2.5 8-5.5 8-10V6.5L12 3 4 6.5V11c0 4.5 3 7.5 8 10Z" />
+    <path d="m9.5 12.5 1.5 1.5 3.5-4" />
+  </svg>
+);
+
+const IconCoins = () => (
+  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <ellipse cx="12" cy="6" rx="6" ry="2.5" />
+    <path d="M6 6v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V6" />
+    <path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5" />
+  </svg>
+);
+
 export const metadata: Metadata = {
   title: "Erbrecht",
   description:
-    "Testament und gesetzliche Erbfolge, Pflichtteil, Erbengemeinschaft und Nachlassabwicklung – rechtssicher gestalten und durchsetzen."
+    "Testament und gesetzliche Erbfolge, Pflichtteil, Erbengemeinschaft und Nachlassabwicklung - rechtssicher gestalten und durchsetzen."
 };
 
 export default function Page() {
   return (
-    <Section
-      variant="subtle"
-      as="h1"
-      title="Erbrecht"
-      intro="Gestaltung und Durchsetzung von Erbrechten - klar, vorausschauend und konfliktvermeidend."
-    >
-      <div className="grid gap-6 sm:grid-cols-2">
-        <ul className="list-disc pl-5 text-white/80 space-y-2">
-          <li>Testament und Erbvertrag: Gestaltung, Auslegung, Anfechtung</li>
-          <li>Gesetzliche Erbfolge und Enterbung</li>
-          <li>Pflichtteilsrechte: Anspruch, Höhe, Durchsetzung</li>
-          <li>Erbengemeinschaft: Verwaltung, Auseinandersetzung, Erbauseinandersetzungsvertrag</li>
-          <li>Nachlassabwicklung und Erbschein</li>
-        </ul>
-        <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-          <h3 className="font-semibold text-white">Vorgehen</h3>
-          <p className="mt-2 text-white/80">
-            Wir prüfen die Rechtslage, sichern Fristen und verhandeln konsequent. Ziel ist eine
-            tragfähige Lösung - notfalls mit gerichtlicher Durchsetzung.
-          </p>
-          <div className="mt-4">
-            <Link href="/kontakt" className="no-underline" aria-label="Jetzt Kontakt aufnehmen">
-              <Button>Jetzt Kontakt aufnehmen</Button>
-            </Link>
+    <>
+      <Section
+        variant="subtle"
+        as="h1"
+        title="Erbrecht"
+        intro="Gestaltung und Durchsetzung von Erbrechten - klar, vorausschauend und konfliktvermeidend."
+      >
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-start">
+          <div className="space-y-4 text-white/85 leading-relaxed">
+            <p>
+              Wir prüfen Testamente, Erbverträge und Nachlassfragen, sichern Fristen und bereiten eine fundierte Strategie vor –
+              einvernehmliche Lösung oder gerichtliche Durchsetzung, wenn nötig.
+            </p>
+            <ul className="space-y-3 text-white/85">
+              <li className="flex gap-2">
+                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
+                <span>Testament & Erbvertrag: Gestaltung, Auslegung, Anfechtung</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
+                <span>Gesetzliche Erbfolge und Enterbung</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
+                <span>Pflichtteil: Anspruch, Höhe, Durchsetzung</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
+                <span>Erbengemeinschaft: Verwaltung, Auseinandersetzung, Verträge</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
+                <span>Nachlassabwicklung und Erbschein</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-5 rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
+            <div className="rounded-lg border border-[#1f3358] bg-[#10253f] px-4 py-3">
+              <div className="text-sm text-white/70">Erstkontakt</div>
+              <div className="text-lg font-semibold text-white">Fristen & Unterlagen klären</div>
+            </div>
+            <p className="text-white/80">
+              Wir sichten Nachweise, sichern Fristen und verschaffen Transparenz zu Pflichtteil, Erbengemeinschaft und Kosten. Anschließend
+              erhalten Sie einen Fahrplan – außergerichtlich oder vor Gericht.
+            </p>
+            <ul className="space-y-3 text-white/80">
+              <li className="flex items-start gap-2">
+                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
+                <span>Testament, Erbschein, Konten und Verträge sortieren</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
+                <span>Ansprüche berechnen: Pflichtteil, Ausgleich, Zugehör</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
+                <span>Strategie festlegen: Ausgleich, Vergleich, gerichtliche Schritte</span>
+              </li>
+            </ul>
+            <div>
+              <Link href="/kontakt" className="no-underline" aria-label="Termin im Erbrecht vereinbaren">
+                <Button className="w-full">Termin vereinbaren</Button>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+
+      <Section variant="pattern" title="Schwerpunkte im Erbrecht" align="center">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Card title="Testament & Erbvertrag" text="Gestalten, auslegen, anfechten – klar dokumentiert, fristsicher umgesetzt." icon={<IconDocument />} />
+          <Card title="Pflichtteil" text="Ansprüche berechnen, Auskunft verlangen, Zahlungen durchsetzen." icon={<IconScale />} />
+          <Card title="Erbengemeinschaft" text="Verwaltung, Auseinandersetzung und Verträge pragmatisch gestalten." icon={<IconDocument />} />
+          <Card title="Nachlassabwicklung" text="Erbschein, Schuldenklärung, Verwertung und Verteilung steuern." icon={<IconShield />} />
+          <Card title="Enterbung & Anfechtung" text="Rechtliche Grenzen prüfen und Streitpunkte früh entschärfen." icon={<IconDocument />} />
+          <Card title="Immobilien & Unternehmen" text="Bewertung, Ausgleichszahlungen und Nutzungslösungen vorbereiten." icon={<IconHome />} />
+        </div>
+      </Section>
+
+      <Section variant="contrast" align="center" title="Nächster Schritt">
+        <div className="max-w-2xl mx-auto space-y-4 text-white/85">
+          <p>Wir klären kurz Ihre Situation, benötigte Unterlagen und den besten Weg – außergerichtlich oder vor Gericht.</p>
+          <Link href="/kontakt" className="no-underline inline-flex">
+            <Button size="lg">Kontakt aufnehmen</Button>
+          </Link>
+        </div>
+      </Section>
+    </>
   );
 }
