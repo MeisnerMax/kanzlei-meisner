@@ -14,17 +14,6 @@ const IconContract = () => (
   </svg>
 );
 
-const IconScale = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="M12 3v18" />
-    <path d="M6 6h12" />
-    <path d="m7.5 6-3 7h6l-3-7Z" />
-    <path d="m19.5 6-3 7h6l-3-7Z" />
-    <path d="M3 13c0 2 2 4 4.5 4s4.5-2 4.5-4" />
-    <path d="M12 13c0 2 2 4 4.5 4s4.5-2 4.5-4" />
-  </svg>
-);
-
 const IconShield = () => (
   <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
     <path d="M12 21c5-2.5 8-5.5 8-10V6.5L12 3 4 6.5V11c0 4.5 3 7.5 8 10Z" />

@@ -40,14 +40,6 @@ const IconShield = () => (
   </svg>
 );
 
-const IconCoins = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <ellipse cx="12" cy="6" rx="6" ry="2.5" />
-    <path d="M6 6v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V6" />
-    <path d="M6 11v5c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5" />
-  </svg>
-);
-
 export const metadata: Metadata = {
   title: "Erbrecht",
   description:
