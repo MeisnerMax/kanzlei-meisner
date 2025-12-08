@@ -1,33 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Section from "@/components/Section";
-import Card from "@/components/Card";
 import Button from "@/components/Button";
-
-const iconClass = "h-10 w-10 text-primary-300";
-
-const IconContract = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <rect x="5" y="3" width="10" height="18" rx="2" />
-    <path d="M9 7h4M9 11h4M9 15h2" />
-    <path d="m15 8 4 4-4 4" />
-  </svg>
-);
-
-const IconShield = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="M12 21c5-2.5 8-5.5 8-10V6.5L12 3 4 6.5V11c0 4.5 3 7.5 8 10Z" />
-    <path d="m9.5 12.5 1.5 1.5 3.5-4" />
-  </svg>
-);
-
-const IconMoney = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <rect x="3" y="7" width="18" height="10" rx="2" />
-    <path d="M7 12h10" />
-    <path d="M7 9h0.01M17 15h0.01" />
-  </svg>
-);
 
 export const metadata: Metadata = {
   title: "Zivilrecht",
