@@ -20,7 +20,7 @@ export default function Page() {
             Telefon: <a className="no-underline" href="tel:+499521950460">09521 - 950 460</a>
           </p>
           <p>
-            Fax: <span className="no-underline">09521 - 950 461</span>
+            Mobil: <span className="no-underline">0176 - 44413255</span>
           </p>
           <p>
             E-Mail: <a className="no-underline" href="mailto:anwaltskanzlei-fischer@t-online.de">anwaltskanzlei-fischer@t-online.de</a>
@@ -43,7 +43,7 @@ export default function Page() {
           </div>
           <div className="rounded-lg border border-white/15 p-3 bg-white/5 text-sm text-white/80">
             <p className="font-medium text-white">Bürozeiten</p>
-            <p className="text-white/80">Mo – Fr: 08:00 – 12:00 | Mo – Do: 13:00 – 17:00</p>
+            <p className="text-white/80">Mo – Fr: 09:00 – 12:00 | Mo – Do: 13:00 – 17:00</p>
             <p className="text-white/80">Sprechstunde nach Vereinbarung.</p>
           </div>
         </div>

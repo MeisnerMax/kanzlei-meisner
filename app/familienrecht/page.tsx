@@ -66,7 +66,7 @@ export default function Page() {
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-start">
           <div className="space-y-4 text-white/85 leading-relaxed">
             <p>
-              Wir strukturieren Ihren Sachverhalt, sichern Fristen und sprechen Klartext zu Unterhalt, Vermögen und Umgang. Ziel ist eine
+              Ich strukturiere Ihren Sachverhalt, sichere Fristen und spreche Klartext zu Unterhalt, Vermögen und Umgang. Ziel ist eine
               tragfähige Lösung – einvernehmlich, wenn möglich; bestimmt vor Gericht, wenn nötig.
             </p>
             <ul className="space-y-3 text-white/85">
@@ -99,8 +99,8 @@ export default function Page() {
               <div className="text-lg font-semibold text-white">Klare Schritte & Fristen</div>
             </div>
             <p className="text-white/80">
-              Wir klären Prioritäten, erforderliche Unterlagen und Optionen – inklusive Kosten und Chancen. Danach erhalten Sie einen
-              Fahrplan für außergerichtliche Einigung oder gerichtliche Durchsetzung.
+              Ich kläre Prioritäten, erforderliche Unterlagen und Optionen – inklusive Kosten und Chancen. Danach erhalten Sie einen
+              Fahrplan für das Mediationsverfahren.
             </p>
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-2">
@@ -109,7 +109,7 @@ export default function Page() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Optionen abwägen: Vergleich, Mediation, gerichtliches Vorgehen</span>
+                <span>Optionen abwägen: Vergleich, Einigung, Durchsetzung</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
@@ -132,7 +132,7 @@ export default function Page() {
           <Card title="Sorgerecht & Umgang" text="Regelungen treffen, umsetzen und bei Bedarf gerichtlich sichern." icon={<IconHeart />} />
           <Card title="Vermögen & Zugewinn" text="Vermögensaufstellung, Stichtage, Ausgleich berechnen und verhandeln." icon={<IconShield />} />
           <Card title="Hausrat & Wohnung" text="Wohnungszuweisung, Hausratsteilung und Übergaben strukturieren." icon={<IconHome />} />
-          <Card title="Mediation & Vergleich" text="Konflikte deeskalieren, Optionen entwickeln, Vereinbarungen dokumentieren." icon={<IconHandshake />} />
+          <Card title="Mediationsvereinbarung" text="Konflikte deeskalieren, Optionen entwickeln, Vereinbarungen dokumentieren." icon={<IconHandshake />} />
         </div>
       </Section>
 

@@ -76,10 +76,6 @@ export default function Page() {
             </div>
           </div>
           <div className="space-y-5 rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <div className="rounded-lg border border-[#1f3358] bg-[#10253f] px-4 py-3">
-              <div className="text-sm text-white/70">Ausrichtung</div>
-              <div className="text-lg font-semibold text-white">Familien- und Zivilrecht</div>
-            </div>
             <h3 className="font-serif text-2xl font-semibold text-white">Ablauf der Mediation</h3>
             <p className="text-white/80">
               Kick-off, Themenliste, gemeinsame Regeln, dann moderierte Sitzungen mit klaren Protokollen und Abschlussvereinbarung.
@@ -156,7 +152,7 @@ export default function Page() {
 
       <Section variant="contrast" align="center" title="Nächster Schritt">
         <div className="max-w-2xl mx-auto space-y-4 text-white/85">
-          <p>Wir klären Ziele, Themen und Zeitplan - und starten mit einem strukturierten Kick-off.</p>
+          <p>Ich kläre Ziele, Themen und Zeitplan - und starte mit einem strukturierten Kick-off.</p>
           <Link href="/kontakt" className="no-underline inline-flex">
             <Button size="lg">Kontakt aufnehmen</Button>
           </Link>

@@ -58,8 +58,8 @@ export default function Page() {
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-start">
           <div className="space-y-4 text-white/85 leading-relaxed">
             <p>
-              Wir prüfen Testamente, Erbverträge und Nachlassfragen, sichern Fristen und bereiten eine fundierte Strategie vor –
-              einvernehmliche Lösung oder gerichtliche Durchsetzung, wenn nötig.
+              Ich prüfe Testamente, Erbverträge und Nachlassfragen, sichere Fristen und bereite eine fundierte Strategie vor –
+              einvernehmliche Lösungen.
             </p>
             <ul className="space-y-3 text-white/85">
               <li className="flex gap-2">
@@ -91,8 +91,8 @@ export default function Page() {
               <div className="text-lg font-semibold text-white">Fristen & Unterlagen klären</div>
             </div>
             <p className="text-white/80">
-              Wir sichten Nachweise, sichern Fristen und verschaffen Transparenz zu Pflichtteil, Erbengemeinschaft und Kosten. Anschließend
-              erhalten Sie einen Fahrplan – außergerichtlich oder vor Gericht.
+              Ich sichte Nachweise, sichere Fristen und verschaffe Transparenz zu Pflichtteil, Erbengemeinschaft und Kosten. Anschließend
+              erhalten Sie einen Fahrplan.
             </p>
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-2">
@@ -119,18 +119,18 @@ export default function Page() {
 
       <Section variant="pattern" title="Schwerpunkte im Erbrecht" align="center">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card title="Testament & Erbvertrag" text="Gestalten, auslegen, anfechten – klar dokumentiert, fristsicher umgesetzt." icon={<IconDocument />} />
-          <Card title="Pflichtteil" text="Ansprüche berechnen, Auskunft verlangen, Zahlungen durchsetzen." icon={<IconScale />} />
-          <Card title="Erbengemeinschaft" text="Verwaltung, Auseinandersetzung und Verträge pragmatisch gestalten." icon={<IconDocument />} />
-          <Card title="Nachlassabwicklung" text="Erbschein, Schuldenklärung, Verwertung und Verteilung steuern." icon={<IconShield />} />
-          <Card title="Enterbung & Anfechtung" text="Rechtliche Grenzen prüfen und Streitpunkte früh entschärfen." icon={<IconDocument />} />
-          <Card title="Immobilien & Unternehmen" text="Bewertung, Ausgleichszahlungen und Nutzungslösungen vorbereiten." icon={<IconHome />} />
+          <Card title="Testament & Erbvertrag" text="Gestalten, auslegen – klar dokumentiert. Vereinbarungen formulieren." icon={<IconDocument />} />
+          <Card title="Pflichtteil" text="Ansprüche berechnen, aufklären, Regelungen treffen" icon={<IconScale />} />
+          <Card title="Erbengemeinschaft" text="Verwaltung, Auseinandersetzung und einvernehmliche Lösungen." icon={<IconDocument />} />
+          <Card title="Nachlassabwicklung" text="Sichten, informieren, Regelungen teffen." icon={<IconShield />} />
+          <Card title="Enterbung & Anfechtung" text="Vorraussetzungen prüfen, Streitpunkte früh entschärfen." icon={<IconDocument />} />
+          <Card title="Immobilien & Unternehmen" text="Bewertung, Ausgleichszahlungen und Nutzungslösungen vereinbaren." icon={<IconHome />} />
         </div>
       </Section>
 
       <Section variant="contrast" align="center" title="Nächster Schritt">
         <div className="max-w-2xl mx-auto space-y-4 text-white/85">
-          <p>Wir klären kurz Ihre Situation, benötigte Unterlagen und den besten Weg – außergerichtlich oder vor Gericht.</p>
+          <p>Ich kläre kurz Ihre Situation, benötigte Unterlagen und die Mediation.</p>
           <Link href="/kontakt" className="no-underline inline-flex">
             <Button size="lg">Kontakt aufnehmen</Button>
           </Link>

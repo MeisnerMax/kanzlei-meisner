@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="container-max relative z-10 grid gap-12 py-24 sm:py-32 md:grid-cols-2 md:items-center">
         <div className="max-w-3xl hero-fly-left">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white">
-            Volljuristin Meisner in der Kanzlei Fischer (Haßfurt & Ebern)
+            Mediatorin Meisner
           </h1>
           <p className="mt-6 text-xl text-white/90 leading-relaxed">
             Volljuristin & Mediatorin für Familien-, Erb- und Zivilrecht. Klar strukturiert, mit 30+ Jahren Erfahrung und verlässlicher Kommunikation.
@@ -34,12 +34,12 @@ export default function HeroSection() {
               <div className="text-sm text-[#c6cede]">Erfahrung als Juristin</div>
             </div>
             <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-md">
-              <div className="text-2xl font-semibold text-[#e8edf5]">Mitglied</div>
-              <div className="text-sm text-[#c6cede]">AG Familien-/Erbrecht</div>
+              <div className="text-2xl font-semibold text-[#e8edf5]">20+ Jahre</div>
+              <div className="text-sm text-[#c6cede]">Mediatorin</div>
             </div>
             <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-md">
-              <div className="text-2xl font-semibold text-[#e8edf5]">Verlässlich</div>
-              <div className="text-sm text-[#c6cede]">Klare Fristen & Rückmeldungen</div>
+              <div className="text-2xl font-semibold text-[#e8edf5]">500+</div>
+              <div className="text-sm text-[#c6cede]">Zufriedene Kunden</div>
             </div>
           </div>
         </div>

@@ -27,11 +27,11 @@ export default function Page() {
           </div>
           <div className="rounded-lg border border-white/15 bg-white/5 p-6">
             <h3 className="font-semibold text-white">Arbeitsweise</h3>
-            <p className="mt-2 text-white/80">Gründliche Analyse, saubere Dokumentation, Vergleichsmöglichkeiten ausloten - konsequent vor Gericht, wenn nötig.</p>
+            <p className="mt-2 text-white/80">Gründliche Analyse, saubere Dokumentation, Vergleichsmöglichkeiten ausloten.</p>
           </div>
           <div className="rounded-lg border border-white/15 bg-white/5 p-6">
             <h3 className="font-semibold text-white">Kommunikation</h3>
-            <p className="mt-2 text-white/80">Klar, verständlich, ohne Juristendeutsch - mit verlässlichen Rückmeldungen und abgestimmten nächsten Schritten.</p>
+            <p className="mt-2 text-white/80">Klar, verständlich - mit verlässlichen Rückmeldungen und abgestimmten nächsten Schritten.</p>
           </div>
         </div>
       </Section>

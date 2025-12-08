@@ -12,7 +12,6 @@ const nav = [
   { href: "/zivilrecht", label: "Zivilrecht" },
   { href: "/medizinrecht", label: "Medizinrecht" },
   { href: "/mediation", label: "Mediation" },
-  { href: "/kanzlei", label: "Kanzlei" },
   { href: "/anwalt", label: "Anwältin" },
   { href: "/kontakt", label: "Kontakt" }
 ];
@@ -23,8 +22,8 @@ export default function Header() {
     <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#050d1a]/95 via-[#050915]/90 to-transparent backdrop-blur-sm border-b border-white/5 text-white">
       <div className="container-max h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 no-underline">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">M</span>
-          <span className="font-serif text-lg font-semibold text-white">Meisner</span>
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">SM</span>
+          <span className="font-serif text-lg font-semibold text-white">Stephanie Meisner</span>
         </Link>
         <nav className="hidden md:flex items-center gap-1" aria-label="Hauptnavigation">
           {nav.map((n) => (

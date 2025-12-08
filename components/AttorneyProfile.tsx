@@ -4,12 +4,12 @@ export default function AttorneyProfile() {
   return (
     <div className="grid gap-8 sm:grid-cols-[220px_1fr] items-start">
       <div className="relative h-[220px] w-[220px] overflow-hidden rounded-lg ring-1 ring-white/20">
-        <Image src="/attorney.png" alt="Portrait von Volljuristin Meisner" fill sizes="220px" />
+        <Image src="/profilbild.jpg" alt="Portrait von Volljuristin Meisner" fill sizes="220px" />
       </div>
       <div>
-        <h3 className="font-serif text-2xl font-semibold text-white">Volljuristin Meisner</h3>
+        <h3 className="font-serif text-2xl font-semibold text-white">Stephanie Meisner</h3>
         <p className="mt-2 text-white/80">
-          Volljuristin und Mediatorin, fokussiert auf Familien-, Erb- und Zivilrecht - mit über 30 Jahren Erfahrung in anspruchsvollen Verfahren und strukturierten Verhandlungen.
+         Ich bringe Emphatie und Klarheit in Situationen, die sich festgefahren anfühlen, und eröffne einen Raum, in dem Sie wirklich gehört werden. Mit einem verständnisvollen Blick, der im juristisch oft harten Umfeld selten ist, begleite ich Sie dahin, wo Verständigung wieder möglich wird.
         </p>
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.35fr_0.9fr]">
           <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-5 shadow-soft space-y-4">
@@ -64,7 +64,7 @@ export default function AttorneyProfile() {
             <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-soft">
               <h4 className="font-semibold text-white">Mitgliedschaften</h4>
               <ul className="mt-2 list-disc pl-5 text-white/80 space-y-1">
-                <li>Arbeitsgemeinschaft Familien- und Erbrecht</li>
+                <li>Arbeitskreis Familien & Erbrecht</li>
                 <li>Arbeitskreis Medizinrecht</li>
               </ul>
             </div>

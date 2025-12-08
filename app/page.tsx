@@ -98,36 +98,36 @@ export default function Page() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <Card
             title="Trennung & Scheidung"
-            text="Begleitung durch das Scheidungsverfahren, Unterhalt, Zugewinnausgleich, Vermögensaufteilung."
+            text="Scheidungscoaching, Unterhalt, Zugewinnausgleich, Vermögensaufteilung."
             href="/familienrecht"
             icon={<IconFamily />}
           />
           <Card
             title="Sorgerecht & Umgang"
-            text="Kindeswohl im Fokus: Umgangsregelungen, Sorgerechtsfragen, Mediation."
+            text="Kindeswohl im Fokus: Umgangsregelungen, Sorgerechtsfragen."
             href="/familienrecht"
             icon={<IconFamily />}
           />
           <Card
             title="Testament & Erbfolge"
-            text="Gestaltung von Testamenten, gesetzliche Erbfolge, Pflichtteilsrechte."
+            text="Gemeinsame Gestaltung von Testamenten, Erbfolge, Pflichtteilsrechten."
             href="/erbrecht"
             icon={<IconLaw />}
           />
           <Card
             title="Erbengemeinschaft"
-            text="Auseinandersetzung von Nachlässen, Durchsetzung von Ansprüchen, Konfliktlösung."
+            text="Besprechung von Nachlässen, Herausarbeiten von Ansprüchen, Konfliktlösung."
             href="/erbrecht"
             icon={<IconLaw />}
           />
           <Card
             title="Zivilrechtliche Ansprüche"
-            text="Vertragsprüfung, Gewährleistung, Schadensersatz oder offene Forderungen absichern."
+            text="Vertragsgestaltung und Überprüfung, Herausarbeiten von Ansprüchen."
             href="/zivilrecht"
             icon={<IconContract />}
           />
           <Card
-            title="Mediation"
+            title="Medizinrecht"
             text="Konflikte strukturiert lösen, Optionen entwickeln und tragfähige Vereinbarungen sichern."
             href="/mediation"
             icon={<IconMediation />}
@@ -160,7 +160,7 @@ export default function Page() {
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft space-y-4">
             <h3 className="font-serif text-2xl font-semibold text-white">Mediation anfragen</h3>
             <p className="text-white/80">
-              Geeignet für Familien-, Erb-, Nachbarschafts- und Vertragskonflikte. Wir klären Ziele, Zeitplan und Kosten im Erstgespräch.
+              Geeignet für Familien-, Erb-, Nachbarschafts- und Vertragskonflikte. Ich kläre Ziele, Zeitplan und Kosten im Erstgespräch.
             </p>
             <div className="grid gap-3 text-white/80 text-sm">
               <div className="flex items-start gap-2">
@@ -184,7 +184,7 @@ export default function Page() {
           </div>
         </div>
       </Section>
-      <Section variant="contrast" title="Warum Wir?" align="center">
+      <Section variant="contrast" title="Hier sind Sie richtig!" align="center">
         <div className="grid gap-8 sm:grid-cols-3">
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 md:p-8 shadow-soft">
             <div className="mb-3 text-primary-200">

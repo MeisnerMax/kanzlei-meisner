@@ -65,13 +65,13 @@ export default function Page() {
         variant="subtle"
         as="h1"
         title="Medizinrecht"
-        intro="Dokumentation sichern, medizinische Fragen präzise stellen, Ergebnisse konsequent durchsetzen."
+        intro="Dokumentation sichern, medizinische Fragen präzise stellen, Ergebnisse konsequent auflisten."
       >
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <div className="space-y-6 text-white/85 leading-relaxed">
             <p>
-              Ob Behandlungsfehler, unvollständige Aufklärung oder Streit um Gutachten: Ich halte medizinische Details verständlich,
-              sichere Fristen und bereite Vergleich oder Klage strukturiert vor.
+              Ob Behandlungsfehler, unvollständige Aufklärung oder Streit um Gutachten: Ich halte medizinische Details verständlich
+             und bereite nächste Schritte strukturiert vor.
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
@@ -84,7 +84,7 @@ export default function Page() {
               </div>
               <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
                 <h3 className="text-white font-semibold">Durchsetzen</h3>
-                <p className="text-sm text-white/70">Ansprüche beziffern, Versicherer einbinden, gerichtliche Schritte vorbereiten.</p>
+                <p className="text-sm text-white/70">Ansprüche beziffern, Versicherer einbinden, Vereinbarung treffen.</p>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function Page() {
             </div>
             <h3 className="font-serif text-2xl font-semibold text-white">Erstkontakt im Medizinrecht</h3>
             <p className="text-white/80">
-              Unterlagen sichten, Fristen klären, Fahrplan erstellen: Gutachtenauftrag, Vergleich oder konsequente Anspruchsdurchsetzung.
+              Unterlagen sichten, Fristen klären, Fahrplan erstellen.
             </p>
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-2">
@@ -108,7 +108,7 @@ export default function Page() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Strategie für Vergleich, Mediation oder gerichtliche Durchsetzung</span>
+                <span>Strategie für einen Vergleich.</span>
               </li>
             </ul>
             <div>
@@ -134,7 +134,7 @@ export default function Page() {
           />
           <Card
             title="Schmerzensgeld & Schadensersatz"
-            text="Materielle und immaterielle Schäden realistisch beziffern und durchsetzen."
+            text="Materielle und immaterielle Schäden realistisch beziffern und thematisieren."
             icon={<IconMoney />}
           />
           <Card
@@ -144,12 +144,12 @@ export default function Page() {
           />
           <Card
             title="Praxis & Vertrag"
-            text="Praxisübernahme, Kooperationen, Haftung bei Delegation und Organisation."
+            text="Praxisübernahme, Kooperationen."
             icon={<IconContract />}
           />
           <Card
             title="Versicherungen & Kostenträger"
-            text="Abstimmung mit Haftpflicht- und Krankenversicherern, Regress und Erstattungsansprüche."
+            text="Abstimmung mit Haftpflicht- und Krankenversicherern."
             icon={<IconPeople />}
           />
         </div>
@@ -167,12 +167,7 @@ export default function Page() {
               Mehrere Gutachten, enge Fristen und parallele Vergleichsverhandlungen strukturiert steuern.
             </p>
           </div>
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Geburtshilfe & Neurologie</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Komplexe Medizin aufarbeiten, Beweise sichern und langfristige Bedarfe berechnen.
-            </p>
-          </div>
+
           <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
             <h3 className="font-semibold text-white">Organisationsmängel</h3>
             <p className="mt-3 text-white/80 leading-relaxed">
@@ -184,7 +179,7 @@ export default function Page() {
 
       <Section variant="contrast" align="center" title="Nächster Schritt">
         <div className="max-w-2xl mx-auto space-y-4 text-white/85">
-          <p>Wir sichten Ihre Unterlagen, sichern Fristen und legen den Fahrplan fest - Gutachten, Vergleich oder Klage.</p>
+          <p>Ich sichte Ihre Unterlagen, sichere Fristen und legen den Fahrplan fest.</p>
           <Link href="/kontakt" className="no-underline inline-flex">
             <Button size="lg">Kontakt aufnehmen</Button>
           </Link>

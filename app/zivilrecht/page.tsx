@@ -42,37 +42,36 @@ export default function Page() {
         variant="subtle"
         as="h1"
         title="Zivilrecht"
-        intro="Zuverlässige Begleitung bei zivilrechtlichen Streitigkeiten - klarer Ablauf, saubere Dokumentation, realistische Optionen."
+        intro="Zuverlässige Begleitung bei zivilrechtlichen Angelegenheiten - klarer Ablauf, saubere Dokumentation, realistische Optionen."
       >
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <div className="space-y-6 text-white/85 leading-relaxed">
             <p>
-              Ich ordne Ihren Sachverhalt, sichere Fristen und halte Schriftverkehr und Nachweise strukturiert fest. So lassen sich
-              Ansprüche fundiert begründen und Gegenargumente früh abfangen.
+              Ich ordne Ihren Sachverhalt, strukturiere die Schritte im Verfahren und dokumentiere alle Absprachen sowie relevanten Informationen nachvollziehbar. So entstehen klare Grundlagen, um Interessen transparent darzustellen, Missverständnisse früh zu erkennen und gemeinsame Lösungen zu erleichtern.
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
                 <h3 className="text-white font-semibold">Vertrag</h3>
-                <p className="text-sm text-white/70">Kauf-, Werk- und Dienstverträge prüfen, Mängel und Verzug sauber adressieren.</p>
+                <p className="text-sm text-white/70">Kauf-, Werk- und Dienstverträge prüfen und besprechen.</p>
               </div>
               <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
                 <h3 className="text-white font-semibold">Haftung</h3>
                 <p className="text-sm text-white/70">Schaden beziffern, Nachweise sammeln, Vergleichschancen und Risiken klären.</p>
               </div>
               <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
-                <h3 className="text-white font-semibold">Forderung</h3>
-                <p className="text-sm text-white/70">Mahnung, Verzug, gerichtliches Mahnverfahren und Vollstreckung koordinieren.</p>
+                <h3 className="text-white font-semibold">Vereinbarung</h3>
+                <p className="text-sm text-white/70">Ich strukturiere, dokumentiere klar und schaffe  gemeinsame Lösungen.</p>
               </div>
             </div>
           </div>
           <div className="space-y-5 rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
             <div className="rounded-lg border border-[#1f3358] bg-[#10253f] px-4 py-3">
               <div className="text-sm text-white/70">Schwerpunkt</div>
-              <div className="text-lg font-semibold text-white">Vertrag, Haftung, Forderung</div>
+              <div className="text-lg font-semibold text-white">Vertrag, Vereinbarung</div>
             </div>
             <h3 className="font-serif text-2xl font-semibold text-white">Erstberatung im Zivilrecht</h3>
             <p className="text-white/80">
-              Unterlagen sichten, Risiken und Kosten besprechen, Fahrplan festlegen: Aufforderung, Vergleich oder gerichtliche Schritte.
+              Unterlagen sichten, Risiken und Kosten besprechen, Fahrplan festlegen.
             </p>
             <ul className="space-y-3 text-white/80">
               <li className="flex items-start gap-2">
@@ -83,10 +82,7 @@ export default function Page() {
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
                 <span>Risiken, Kosten und Vergleichschancen transparent besprechen</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Nächste Schritte: Aufforderung, Vergleich, Mahn- oder Klageverfahren</span>
-              </li>
+
             </ul>
             <div>
               <Link href="/kontakt" className="no-underline" aria-label="Termin im Zivilrecht vereinbaren">
@@ -97,61 +93,9 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section variant="pattern" title="Schwerpunkte im Zivilrecht" align="center">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <Card
-            title="Kaufvertrag & Gewährleistung"
-            text="Mängel dokumentieren, Nacherfüllung, Minderung oder Rücktritt durchsetzen."
-            icon={<IconContract />}
-          />
-          <Card
-            title="Dienst- und Werkvertrag"
-            text="Leistungsstörungen, Verzug, Abnahme und Nachbesserung klar ordnen."
-            icon={<IconContract />}
-          />
-          <Card
-            title="Schadensersatz & Haftung"
-            text="Ansprüche beziffern, Nutzungsausfall und Verdienstausfall verhandeln."
-            icon={<IconShield />}
-          />
-          <Card
-            title="Forderungsmanagement"
-            text="Mahnung, Verzugsschaden, gerichtliches Mahnverfahren und Vollstreckung steuern."
-            icon={<IconMoney />}
-          />
-        </div>
-      </Section>
-
-      <Section
-        variant="contrast"
-        title="Typische Situationen"
-        intro="Klarer Fahrplan für Streitigkeiten im Alltag - mit belastbarer Dokumentation und konsequenter Umsetzung."
-      >
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Fehlgeschlagene Lieferung</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Mängel dokumentieren, Fristen setzen, Nacherfüllung oder Rücktritt absichern, Kostenersatz beziffern.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Haftung nach Schaden</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Schriftwechsel mit Versicherern strukturieren, Gutachten beiziehen und Vergleichsmöglichkeiten ausloten.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Offene Forderung</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Anspruch prüfen, sichere Mahnung erstellen, gerichtliches Mahnverfahren oder Klage mit Vollstreckung einleiten.
-            </p>
-          </div>
-        </div>
-      </Section>
-
       <Section variant="contrast" align="center" title="Nächster Schritt">
         <div className="max-w-2xl mx-auto space-y-4 text-white/85">
-          <p>Kurze Einschätzung zu Vertrag, Fristen und Risiken - und ein klarer Plan für Aufforderung, Vergleich oder Klage.</p>
+          <p>Kurze Einschätzung zu Vertrag, Fristen und Risiken - und ein klarer Plan für das Mediationsverfahren.</p>
           <Link href="/kontakt" className="no-underline inline-flex">
             <Button size="lg">Kontakt aufnehmen</Button>
           </Link>
