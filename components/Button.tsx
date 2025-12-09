@@ -11,7 +11,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 function styles(variant: Variant, size: Size) {
   const base =
-    "inline-flex items-center justify-center rounded-full font-semibold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center rounded-full font-semibold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap";
   const variants: Record<Variant, string> = {
     primary: "bg-primary-700 text-white hover:bg-primary-800",
     secondary: "border-2 border-primary-700 text-primary-700 bg-transparent hover:bg-primary-50",

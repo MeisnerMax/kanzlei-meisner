@@ -32,9 +32,17 @@ export default function Header() {
             </NavLink>
           ))}
         </nav>
-        <div className="hidden md:block">
-          <Link href="/kontakt" className="no-underline" aria-label="Jetzt Beratung anfragen">
-            <Button size="md">Jetzt Beratung anfragen</Button>
+        <div className="hidden md:flex items-center gap-6">
+          
+          <Link
+            href="https://nexgen-consulting.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white/80 hover:text-white hover:border-white/20 hover:bg-white/10 transition-colors"
+            aria-label="NexGen Consulting Website in neuem Tab öffnen"
+          >
+            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(16,185,129,0.2)]" aria-hidden="true" />
+            Made by NexGen
           </Link>
         </div>
         <div className="md:hidden">
@@ -44,6 +52,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-
