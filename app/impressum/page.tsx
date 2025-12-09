@@ -12,24 +12,19 @@ export default function Page() {
       <div className="max-w-3xl prose-legal">
         <h2>Angaben gemäß § 5 TMG</h2>
         <p>
-          Volljuristin Meisner in der Kanzlei Haßfurt Fischer
-          <br /> Musterstraße 12
-          <br /> 97437 Haßfurt
+          Stephanie Meisner
+          <br /> Loßbergstraße 12
+          <br /> 96106 Ebern
         </p>
         <h3>Kontakt</h3>
         <p>
-          Telefon: +49 9512 000000
-          <br /> E-Mail: kanzlei@example.com
+          Telefon: 0176 - 44413255
+          
         </p>
         <h3>Berufsbezeichnung und zuständige Kammer</h3>
         <p>
-          Berufsbezeichnung: Rechtsanwältin (Deutschland)
-          <br /> Zuständige Rechtsanwaltskammer: Rechtsanwaltskammer Bamberg
-        </p>
-        <h3>Berufsrechtliche Regelungen</h3>
-        <p>
-          Es gelten die BRAO, BORA, FAO, RVG. Die Regelungen sind einsehbar auf den Seiten der
-          Bundesrechtsanwaltskammer.
+          Berufsbezeichnung: Mediatorin
+          
         </p>
         <h3>Umsatzsteuer-ID</h3>
         <p>Angabe folgt.</p>
