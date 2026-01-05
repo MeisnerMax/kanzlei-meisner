@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import NavLink from "@/components/NavLink";
-import Button from "@/components/Button";
 import MobileMenu from "@/components/MobileMenu";
 
 const nav = [
