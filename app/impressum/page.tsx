@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Gesetzliche Anbieterkennzeichnung – Volljuristin Meisner in der Kanzlei Haßfurt Fischer (Standorte Haßfurt und Ebern)."
+  description: "Gesetzliche Anbieterkennzeichnung – Stephanie Meisner, Juristin."
 };
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
         </p>
         <h3>Berufsbezeichnung und zuständige Kammer</h3>
         <p>
-          Berufsbezeichnung: Mediatorin
+          Berufsbezeichnung: Volljuristin & Mediatorin
           
         </p>
         <h3>Umsatzsteuer-ID</h3>

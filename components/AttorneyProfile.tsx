@@ -9,7 +9,7 @@ export default function AttorneyProfile() {
       <div>
         <h3 className="font-serif text-2xl font-semibold text-white">Stephanie Meisner</h3>
         <p className="mt-2 text-white/80">
-         Ich bringe Emphatie und Klarheit in Situationen, die sich festgefahren anfühlen, und eröffne einen Raum, in dem Sie wirklich gehört werden. Mit einem verständnisvollen Blick, der im juristisch oft harten Umfeld selten ist, begleite ich Sie dahin, wo Verständigung wieder möglich wird.
+         Ich bringe Empathie und Klarheit in Situationen, die sich festgefahren anfühlen, und eröffne einen Raum, in dem Sie wirklich gehört werden. Mit einem verständnisvollen Blick, der im juristischen Alltag selten ist, begleite ich Sie dahin, wo Verständigung wieder möglich wird.
         </p>
         <div className="mt-6 grid gap-6 lg:grid-cols-[1.35fr_0.9fr]">
           <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-5 shadow-soft space-y-4">
@@ -20,7 +20,7 @@ export default function AttorneyProfile() {
             <div className="space-y-3">
               <div className="rounded-lg border border-[#1f3358] bg-[#10253f] p-3">
                 <div className="text-sm text-white/60">seit 2025</div>
-                <div className="font-semibold text-white">Kanzlei Tilman Fischer</div>
+                <div className="font-semibold text-white">Juristische Beratung in Haßfurt</div>
                 <div className="text-sm text-white/70">Familien-, Erb- und Zivilrecht</div>
               </div>
               <div className="rounded-lg border border-[#1f3358] bg-[#10253f] p-3">
@@ -41,7 +41,7 @@ export default function AttorneyProfile() {
                 </div>
                 <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">
                   <div className="text-sm text-white/60">1994 – 2006</div>
-                  <div className="font-semibold text-white">Eigene Kanzlei</div>
+                  <div className="font-semibold text-white">Selbstständige juristische Tätigkeit</div>
                   <div className="text-sm text-white/70">Familien- und Erbrecht</div>
                 </div>
                 <div className="rounded-lg border border-[#1f3358] bg-[#0c1d33] p-3">

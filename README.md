@@ -1,6 +1,6 @@
-# Kanzlei Meisner – Next.js Website
+# Stephanie Meisner – Juristin Website
 
-Moderne, seriöse Marketing-Website für eine auf Familienrecht und Erbrecht spezialisierte Einzelkanzlei in Haßfurt.
+Moderne, seriöse Website für Stephanie Meisner als Juristin mit Schwerpunkt Familien- und Erbrecht in Haßfurt.
 
 ## Ziel
 - Klare Darstellung von Leistungen (Familienrecht & Erbrecht)
@@ -33,4 +33,3 @@ Moderne, seriöse Marketing-Website für eine auf Familienrecht und Erbrecht spe
 ## Hinweise
 - Kontaktformular ist aktuell eine Versand-Demo (Frontend-Only).
 - Für Produktion empfiehlt sich ein E-Mail/CRM-Backend und Anti-Spam (z. B. hCaptcha/Cloudflare Turnstile).
-

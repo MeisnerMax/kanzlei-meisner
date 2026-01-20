@@ -98,7 +98,7 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
             </nav>
 
             <div className="mt-auto border-t border-white/10 pt-4 text-sm text-white/60">
-              © {new Date().getFullYear()} Volljuristin Meisner in der Kanzlei Haßfurt Fischer
+              © {new Date().getFullYear()} Stephanie Meisner, Juristin
             </div>
           </div>
         </div>

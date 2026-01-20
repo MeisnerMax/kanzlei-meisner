@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Informationen zur Verarbeitung personenbezogener Daten – Kanzlei Haßfurt Fischer (Volljuristin Meisner)."
+  description: "Informationen zur Verarbeitung personenbezogener Daten – Stephanie Meisner."
 };
 
 export default function Page() {
@@ -112,12 +112,12 @@ export default function Page() {
         <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
         <p>
           Stephanie Meisner<br />
-          Losbergstraße 12<br />
+          Loßbergstraße 12<br />
           96106 Ebern
         </p>
         <p>
-          Telefon: [Telefonnummer der verantwortlichen Stelle]<br />
-          E-Mail: [E-Mail-Adresse der verantwortlichen Stelle]
+          Telefon: 09521 - 950 460<br />
+          E-Mail: kontakt@stephanie-meisner.de
         </p>
         <p>
           Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam
@@ -146,7 +146,7 @@ export default function Page() {
           DSGVO. Sofern Sie in die Speicherung von Cookies oder in den Zugriff auf Informationen in Ihr
           Endgerät (z. B. via Device-Fingerprinting) eingewilligt haben, erfolgt die
           Datenverarbeitung zusätzlich auf Grundlage von § 25 Abs. 1 TDDDG. Die Einwilligung ist
-          jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchf fChrung
+          jederzeit widerrufbar. Sind Ihre Daten zur Vertragserfüllung oder zur Durchführung
           vorvertraglicher Maßnahmen erforderlich, verarbeiten wir Ihre Daten auf Grundlage des Art.
           6 Abs. 1 lit. b DSGVO. Des Weiteren verarbeiten wir Ihre Daten, sofern diese zur Erfüllung
           einer rechtlichen Verpflichtung erforderlich sind auf Grundlage von Art. 6 Abs. 1 lit. c
@@ -231,13 +231,13 @@ export default function Page() {
           Verarbeitung besteht in folgenden Fällen:
         </p>
         <ul>
-          <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benöti gen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
+          <li>Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten personenbezogenen Daten bestreiten, benötigen wir in der Regel Zeit, um dies zu überprüfen. Für die Dauer der Prüfung haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
           <li>Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah/geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.</li>
           <li>Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
           <li>Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</li>
         </ul>
         <p>
-          Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen nat rlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
+          Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.
         </p>
 
         <h3>SSL- bzw. TLS-Verschlüsselung</h3>

@@ -9,10 +9,10 @@ export default function HeroSection() {
       <div className="container-max relative z-10 grid gap-12 py-24 sm:py-32 md:grid-cols-2 md:items-center">
         <div className="max-w-3xl hero-fly-left">
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white">
-            Mediatorin Meisner
+            Stephanie Meisner
           </h1>
           <p className="mt-6 text-xl text-white/90 leading-relaxed">
-            Volljuristin & Mediatorin für Familien-, Erb- und Zivilrecht. Klar strukturiert, mit 30+ Jahren Erfahrung und verlässlicher Kommunikation.
+            Juristin & Mediatorin für Familien-, Erb- und Zivilrecht. Klar strukturiert, mit 30+ Jahren Erfahrung und verlässlicher Kommunikation.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Link href="/kontakt" className="no-underline" aria-label="Termin vereinbaren">
@@ -60,5 +60,4 @@ export default function HeroSection() {
     </section>
   );
 }
-
 

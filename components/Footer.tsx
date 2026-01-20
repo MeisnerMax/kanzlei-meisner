@@ -8,18 +8,17 @@ export default function Footer() {
         <div>
           <div className="mb-3 flex items-center gap-2">
             <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">M</span>
-            <span className="font-serif text-lg font-semibold text-white">Mediatorin Meisner</span>
+            <span className="font-serif text-lg font-semibold text-white">Stephanie Meisner</span>
           </div>
-          <p className="text-white/70">Kanzlei Fischer in Haßfurt</p>
+          <p className="text-white/70">Juristin & Mediatorin</p>
         </div>
         <div>
           <h3 className="mb-2 font-semibold text-white">Kontakt</h3>
           <ul className="space-y-1 text-white/70">
-            <li>Telefon: <a href="tel:+499521950460" className="no-underline">09521 - 950 460</a></li>
-            <li>Mobil: 0176 - 44413255</li>
-            <li>E-Mail: <a href="mailto:anwaltskanzlei-fischer@t-online.de" className="no-underline">anwaltskanzlei-fischer@t-online.de</a></li>
-            <li>Adresse: Schlesingerstr. 26, 97437 Haßfurt</li>
-            <li>Weitere Geschäftsstelle: Ebern</li>
+            
+            <li>E-Mail: <a href="mailto:kontakt@stephanie-meisner.de" className="no-underline">kontakt@stephanie-meisner.de</a></li>
+            
+            <li>Termine in Ebern nach Vereinbarung</li>
           </ul>
         </div>
         <div>

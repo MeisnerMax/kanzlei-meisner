@@ -10,11 +10,11 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata: Metadata = {
   title: {
-    default: "Volljuristin Meisner in der Kanzlei Haßfurt Fischer - Familienrecht & Erbrecht",
-    template: "%s | Volljuristin Meisner - Kanzlei Haßfurt Fischer"
+    default: "Stephanie Meisner | Juristin für Familien- und Erbrecht",
+    template: "%s | Stephanie Meisner"
   },
   description:
-    "Beratung im Familien- und Erbrecht in Haßfurt und Ebern. Volljuristin, Mediatorin - klar, zuverlässig, verbindlich.",
+    "Juristische Beratung im Familien-, Erb- und Zivilrecht. Klar, zuverlässig, verbindlich.",
   metadataBase: new URL("https://example.com")
 };
 

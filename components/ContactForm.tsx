@@ -145,7 +145,7 @@ export default function ContactForm() {
       {errors.privacy && <p id="error-privacy" className="text-sm text-red-600">{errors.privacy}</p>}
       <div className="flex items-center gap-3">
         <Button type="submit" disabled={sending}>{sending ? "Senden…" : "Jetzt Nachricht senden"}</Button>
-        <a href="mailto:kanzlei@example.com?subject=Anfrage%20über%20Website" className="text-sm text-white/80">oder per E-Mail</a>
+        <a href="mailto:kontakt@stephanie-meisner.de?subject=Anfrage%20über%20Website" className="text-sm text-white/80">oder per E-Mail</a>
       </div>
       {status && <p className="text-sm text-white/80">{status}</p>}
       <div className="rounded-xl border border-white/40 bg-white/10 backdrop-blur-md p-4 text-sm text-white/80">

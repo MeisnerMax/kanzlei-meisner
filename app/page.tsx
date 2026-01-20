@@ -55,17 +55,17 @@ function IconMediation() {
 }
 
 export const metadata: Metadata = {
-  title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
+  title: "Stephanie Meisner – Juristin für Familien-, Erb- und Zivilrecht",
   description:
-    "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+    "Juristische Beratung zu Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
   openGraph: {
-    title: "Volljuristin Meisner - Kanzlei Haßfurt Fischer",
+    title: "Stephanie Meisner – Juristin für Familien-, Erb- und Zivilrecht",
     description:
-      "Beratung in Familien-, Erb- und Zivilrecht in Haßfurt und Ebern: Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
+      "Juristische Beratung zu Trennung, Scheidung, Unterhalt, Sorgerecht, Testament, Pflichtteil und Erbengemeinschaft.",
     type: "website",
     url: "https://example.com/",
     images: [
-      { url: "/hero-illustration.svg", width: 1200, height: 630, alt: "Kanzlei Haßfurt Fischer" }
+      { url: "/hero-illustration.svg", width: 1200, height: 630, alt: "Stephanie Meisner Juristin" }
     ]
   }
 };
@@ -77,19 +77,21 @@ export default function Page() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'LegalService',
-            name: 'Volljuristin Meisner in der Kanzlei Haßfurt Fischer',
+            '@type': 'Person',
+            name: 'Stephanie Meisner',
+            jobTitle: 'Juristin & Mediatorin',
             image: 'https://example.com/hero-illustration.svg',
+            url: 'https://example.com',
+            telephone: '+49 9521 950460',
+            knowsAbout: ['Familienrecht', 'Erbrecht', 'Zivilrecht', 'Mediation'],
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Musterstraße 12',
+              streetAddress: 'Schlesingerstr. 26',
               postalCode: '97437',
               addressLocality: 'Haßfurt',
               addressCountry: 'DE'
             },
-            url: 'https://example.com',
-            telephone: '+49 9512 000000',
-            areaServed: 'Haßfurt und Ebern'
+            areaServed: ['Haßfurt', 'Ebern']
           })
         }}
       />
