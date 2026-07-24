@@ -8,39 +8,45 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        soft: '0 1px 2px 0 rgba(0,0,0,0.04), 0 1px 1px -1px rgba(0,0,0,0.04)',
-        elevated:
-          '0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.06)',
-        'xl-soft':
-          '0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.06)',
+        soft: '0 12px 40px rgba(25,37,34,0.08)',
+        elevated: '0 28px 80px rgba(25,37,34,0.14)',
       },
-      backgroundImage: {
-        'grid-pattern':
-          'linear-gradient(to right, rgba(10,34,64,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(10,34,64,0.06) 1px, transparent 1px)',
-        'dots-pattern':
-          'radial-gradient(rgba(10,34,64,0.08) 1px, transparent 1px)',
-        'radial-spot':
-          'radial-gradient(600px 300px at 10% 10%, rgba(10,34,64,0.12), transparent), radial-gradient(500px 250px at 90% 0%, rgba(26,57,102,0.10), transparent)',
+      opacity: {
+        12: '0.12',
+        15: '0.15',
+        35: '0.35',
+        45: '0.45',
+        55: '0.55',
+        58: '0.58',
+        62: '0.62',
+        64: '0.64',
+        65: '0.65',
+        66: '0.66',
+        67: '0.67',
+        68: '0.68',
+        72: '0.72',
+        76: '0.76',
+        88: '0.88',
       },
       colors: {
-        primary: {
-          DEFAULT: '#0A2240',
-          50: '#F1F4F8',
-          100: '#E3E9F1',
-          200: '#C7D3E3',
-          300: '#A8BBD1',
-          400: '#7E99B7',
-          500: '#4F7398',
-          600: '#2E547C',
-          700: '#0A2240',
-          800: '#071A31',
-          900: '#051323',
+        ink: {
+          DEFAULT: '#192522',
+          soft: '#263733',
         },
+        ivory: '#F4F1EA',
+        sage: {
+          DEFAULT: '#82968B',
+          dark: '#52685F',
+          light: '#B9C8BF',
+          wash: '#E7ECE8',
+        },
+        clay: '#C7785B',
+        sand: '#DCD4C8',
       },
     },
     fontFamily: {
-      sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-      serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+      sans: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+      serif: ['var(--font-lora)', 'Georgia', 'serif'],
     },
   },
   plugins: [],

@@ -2,43 +2,56 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-transparent text-white dark-footer">
-      <div className="pointer-events-none absolute inset-x-0 -top-10 h-10 bg-gradient-to-b from-white/10 to-transparent" />
-      <div className="container-max grid gap-8 py-12 text-sm sm:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <div className="mb-3 flex items-center gap-2">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">M</span>
-            <span className="font-serif text-lg font-semibold text-white">Stephanie Meisner</span>
+    <footer className="relative overflow-hidden bg-ink text-ivory">
+      <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full border border-ivory/10" />
+      <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full border border-ivory/10" />
+      <div className="container-max relative grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="max-w-md">
+          <div className="mb-5 flex items-center gap-3">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-ivory text-xs font-bold tracking-wider text-ink">
+              SM
+            </span>
+            <span className="font-serif text-2xl font-semibold">Stephanie Meisner</span>
           </div>
-          <p className="text-white/70">Juristin & Mediatorin</p>
+          <p className="text-lg leading-8 text-ivory/65">
+            Mediation & Konfliktklärung für Familie, Erbe, Gesundheit und private
+            Konflikte.
+          </p>
+          <a
+            href="mailto:Meisner.bamberg@freenet.de"
+            className="mt-6 inline-block font-semibold text-ivory underline decoration-clay underline-offset-8"
+          >
+            Meisner.bamberg@freenet.de
+          </a>
         </div>
         <div>
-          <h3 className="mb-2 font-semibold text-white">Kontakt</h3>
-          <ul className="space-y-1 text-white/70">
-            
-            <li>E-Mail: <a href="mailto:kontakt@stephanie-meisner.de" className="no-underline">kontakt@stephanie-meisner.de</a></li>
-            
-            <li>Termine in Ebern nach Vereinbarung</li>
+          <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sage-light">
+            Orientierung
+          </h3>
+          <ul className="space-y-3 text-ivory/65">
+            <li><Link href="/mediation">Was ist Mediation?</Link></li>
+            <li><Link href="/konfliktfelder">Konfliktfelder</Link></li>
+            <li><Link href="/ablauf-kosten">Ablauf & Kosten</Link></li>
+            <li><Link href="/wissen">Wissen & FAQ</Link></li>
           </ul>
         </div>
         <div>
-          <h3 className="mb-2 font-semibold text-white">Leistungen</h3>
-          <ul className="space-y-1 text-white/70">
-            <li><Link href="/familienrecht" className="no-underline">Familienrecht</Link></li>
-            <li><Link href="/erbrecht" className="no-underline">Erbrecht</Link></li>
-            <li><Link href="/zivilrecht" className="no-underline">Zivilrecht</Link></li>
-          </ul>
-        </div>
-        <div>
-          <h3 className="mb-2 font-semibold text-white">Rechtliches</h3>
-          <ul className="space-y-1 text-white/70">
-            <li><Link href="/impressum" className="no-underline">Impressum</Link></li>
-            <li><Link href="/datenschutz" className="no-underline">Datenschutz</Link></li>
+          <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-sage-light">
+            Weiter
+          </h3>
+          <ul className="space-y-3 text-ivory/65">
+            <li><Link href="/stephanie-meisner">Über Stephanie Meisner</Link></li>
+            <li><Link href="/kontakt">Kontakt</Link></li>
+            <li><Link href="/impressum">Impressum</Link></li>
+            <li><Link href="/datenschutz">Datenschutz</Link></li>
           </ul>
         </div>
       </div>
-      <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
-        © {new Date().getFullYear()} Volljuristin Meisner. Alle Rechte vorbehalten.
+      <div className="border-t border-ivory/10">
+        <div className="container-max flex flex-col gap-2 py-5 text-xs text-ivory/45 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} Stephanie Meisner</span>
+          <span>Volljuristin · Mediatorin · Vertrauliche Konfliktklärung</span>
+        </div>
       </div>
     </footer>
   );

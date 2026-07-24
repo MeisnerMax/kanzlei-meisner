@@ -1,41 +1,34 @@
-import type { BlogPost, FAQ } from "@/lib/types";
+import type { FAQ } from "@/lib/types";
 
-export const blogPosts: BlogPost[] = [
+export const mediationFaqs: FAQ[] = [
   {
-    slug: "erstberatung-familienrecht",
-    title: "Die Erstberatung im Familienrecht: Ablauf und Nutzen",
-    excerpt:
-      "Was Sie bei der ersten Beratung erwartet und wie Sie sich vorbereiten können.",
-    date: "2024-07-01",
-    tags: ["Familienrecht", "Erstberatung"]
+    q: "Ist ein erstes Gespräch bereits eine Mediation?",
+    a: "Nein. Im unverbindlichen Orientierungsgespräch klären wir zunächst, worum es geht, wer beteiligt werden sollte und ob Mediation für Ihre Situation passend ist. Erst danach entscheiden Sie in Ruhe über das weitere Vorgehen."
   },
   {
-    slug: "pflichtteil-verstehen",
-    title: "Pflichtteil im Erbrecht: Rechte und Fristen",
-    excerpt: "Wer hat Anspruch und wie wird der Pflichtteil berechnet?",
-    date: "2024-08-15",
-    tags: ["Erbrecht", "Pflichtteil"]
+    q: "Müssen alle Beteiligten freiwillig teilnehmen?",
+    a: "Ja. Mediation lebt von Freiwilligkeit und Eigenverantwortung. Niemand wird zu einer Einigung gedrängt. Alle Beteiligten können das Verfahren jederzeit beenden."
   },
   {
-    slug: "sorgerecht-und-umgang",
-    title: "Sorgerecht und Umgangsrecht: Das Kindeswohl im Blick",
-    excerpt: "Wichtige Grundsätze und praktische Hinweise für Eltern.",
-    date: "2024-09-10",
-    tags: ["Familienrecht", "Kinder"]
+    q: "Wie vertraulich ist eine Mediation?",
+    a: "Der geschützte Rahmen ist ein Kern des Verfahrens. Inhalte werden vertraulich behandelt. Zu Beginn vereinbaren wir gemeinsam, wie mit Informationen und Unterlagen umgegangen wird."
+  },
+  {
+    q: "Wie lange dauert eine Mediation?",
+    a: "Das hängt vom Konflikt und der Zahl der Beteiligten ab. Häufig reichen wenige klar strukturierte Sitzungen. Dauer, Rhythmus und nächste Schritte werden transparent miteinander abgestimmt."
+  },
+  {
+    q: "Kann ich mich zusätzlich rechtlich beraten lassen?",
+    a: "Ja. Die Mediatorin ist allparteilich und erteilt im Verfahren keine einseitige Rechtsberatung. Bei Bedarf können alle Beteiligten vor einer abschließenden Vereinbarung unabhängigen rechtlichen Rat einholen."
+  },
+  {
+    q: "Was kostet die Mediation?",
+    a: "Die Vergütung wird vor Beginn transparent vereinbart, in der Regel auf Stundenbasis. Im Orientierungsgespräch erhalten Sie eine nachvollziehbare Einschätzung zu Rahmen, Aufwand und möglicher Kostenteilung."
+  },
+  {
+    q: "Findet die Mediation in Präsenz oder online statt?",
+    a: "Beides ist möglich. Je nach Situation arbeiten wir in einem persönlichen Gespräch im Raum Bamberg/Ebern, online per Videokonferenz oder in einem abgestimmten hybriden Format."
   }
 ];
 
-export const faqs: FAQ[] = [
-  {
-    q: "Was kostet eine Erstberatung?",
-    a: "Die Kosten richten sich nach dem Rechtsanwaltsvergütungsgesetz (RVG) und dem Gegenstandswert. Sie erhalten vorab eine transparente Einschätzung."
-  },
-  {
-    q: "Welche Unterlagen sollte ich mitbringen?",
-    a: "Relevante Verträge, Korrespondenz, Bescheide sowie – bei Familienrecht – Heiratsurkunde, Geburtsurkunden der Kinder, Einkommensnachweise."
-  },
-  {
-    q: "Wann brauche ich im Erbrecht anwaltliche Unterstützung?",
-    a: "Bei Unklarheiten zur Erbfolge, Pflichtteilsansprüchen, in Erbengemeinschaften oder bei der Gestaltung eines Testaments."
-  }
-];
+export const faqs = mediationFaqs;

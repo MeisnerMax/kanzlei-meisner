@@ -15,5 +15,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-lock.yaml
 package-lock.json
+*.tsbuildinfo
 # Optional editor / OS files
 Thumbs.db

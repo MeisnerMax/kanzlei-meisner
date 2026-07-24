@@ -1,163 +1,86 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import Section from "@/components/Section";
-import Card from "@/components/Card";
-import Button from "@/components/Button";
-
-const iconClass = "h-10 w-10 text-primary-300";
-
-const IconHeart = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-2.6A5 5 0 0 1 19 11c0 5.5-7 10-7 10Z" />
-  </svg>
-);
-
-const IconHome = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <path d="m4 10 8-6 8 6" />
-    <path d="M6 9v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9" />
-    <path d="M10 19v-4h4v4" />
-  </svg>
-);
-
-const IconPeople = () => (
-  <svg viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.6">
-    <circle cx="8" cy="7" r="2.7" />
-    <circle cx="16" cy="9" r="2.7" />
-    <path d="M4 18c0-2.2 1.8-4 4-4h1c2.2 0 4 1.8 4 4" />
-    <path d="M12 17c.5-.6 1.3-1 2.2-1H16c1.9 0 3.5 1.6 3.5 3.5" />
-  </svg>
-);
+import { ClosingCTA, PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Mediation",
   description:
-    "Strukturierte Mediation im Familien- und Zivilrecht: Interessen sichtbar machen, Optionen entwickeln und tragfähige Vereinbarungen festhalten."
+    "Was Mediation leistet, welche Grundsätze gelten und wann ein strukturiertes Konfliktverfahren sinnvoll sein kann.",
+  alternates: { canonical: "/mediation" }
 };
 
-export default function Page() {
+const principles = [
+  ["Freiwillig", "Alle Beteiligten entscheiden selbst, ob sie beginnen, fortfahren und einer Lösung zustimmen."],
+  ["Allparteilich", "Jede Perspektive wird gehört. Die Mediatorin unterstützt das Verfahren, nicht eine Seite."],
+  ["Vertraulich", "Gespräche und Unterlagen bleiben in einem gemeinsam vereinbarten geschützten Rahmen."],
+  ["Ergebnisoffen", "Die Lösung steht nicht vorher fest. Sie wird von den Beteiligten selbst entwickelt und geprüft."]
+] as const;
+
+export default function MediationPage() {
   return (
     <>
-      <Section
-        variant="subtle"
-        as="h1"
-        title="Mediation"
-        intro="Konflikte lösen, bevor sie eskalieren: schlanker Prozess, klare Regeln, dokumentierte Ergebnisse."
-      >
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
-          <div className="space-y-6 text-white/85 leading-relaxed">
-            <p>
-              Ich moderiere die Sitzungen, halte Interessen und Optionen fest und sorge dafür, dass Ergebnisse tragfähig dokumentiert
-              werden. Weniger Eskalation, klarer Fahrplan, nachvollziehbare Kosten.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
-                <span>Gemeinsame Regeln, Themenliste und Zeitplan zu Beginn fixieren</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
-                <span>Sitzungen moderieren, Optionen und Folgen klar machen</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="mt-2 h-1.5 w-5 rounded bg-primary-400" aria-hidden />
-                <span>Ergebnisse schriftlich sichern: Vereinbarungen, Verantwortlichkeiten, Termine</span>
-              </li>
-            </ul>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
-                <h3 className="text-white font-semibold">Strukturiert</h3>
-                <p className="text-sm text-white/70">Kick-off, Phasenplan und Protokoll pro Sitzung.</p>
-              </div>
-              <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4">
-                <h3 className="text-white font-semibold">Rechtlich belastbar</h3>
-                <p className="text-sm text-white/70">Vereinbarungen verständlich einordnen und sauber formulieren.</p>
-              </div>
-            </div>
-          </div>
-          <div className="space-y-5 rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-serif text-2xl font-semibold text-white">Ablauf der Mediation</h3>
-            <p className="text-white/80">
-              Kick-off, Themenliste, gemeinsame Regeln, dann moderierte Sitzungen mit klaren Protokollen und Abschlussvereinbarung.
-            </p>
-            <ul className="space-y-3 text-white/80">
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Vorbereitung: Ziele, Rahmenbedingungen und Zeitplan abstimmen</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Sitzungen moderieren, Optionen erarbeiten, Deadlocks auflösen</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 h-2 w-2 rounded-full bg-primary-400" aria-hidden />
-                <span>Ergebnisse dokumentieren, Umsetzungsschritte und Kontrollen vereinbaren</span>
-              </li>
-            </ul>
-            <div>
-              <Link href="/kontakt" className="no-underline" aria-label="Mediation anfragen">
-                <Button className="w-full">Mediation anfragen</Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </Section>
+      <PageHero
+        eyebrow="Mediation"
+        title="Ein geschützter Raum für Entscheidungen, die wirklich tragen."
+        intro="Mediation macht Konflikte besprechbar, ohne Verantwortung abzugeben. Sie verbindet klare Struktur mit der Freiheit, eine eigene und faire Lösung zu entwickeln."
+      />
 
-      <Section variant="pattern" title="Einsatzfelder der Mediation" align="center">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <Card
-            title="Familie & Trennung"
-            text="Umgang, Unterhalt, Vermögen und Kommunikation strukturiert klären."
-            icon={<IconHeart />}
-          />
-          <Card
-            title="Erbengemeinschaft"
-            text="Nachlass, Immobiliennutzung und Ausgleichszahlungen verständlich regeln."
-            icon={<IconPeople />}
-          />
-          <Card
-            title="Nachbarschaft & Eigentum"
-            text="Lärm, Wegerecht, Grenzen und Nutzung mit klaren Zusagen entschärfen."
-            icon={<IconHome />}
-          />
+      <Section
+        eyebrow="Der Unterschied"
+        title="Nicht gewinnen oder verlieren. Verstehen, verhandeln, vereinbaren."
+        intro="Ein Gerichtsverfahren entscheidet einen rechtlichen Streit. Mediation schafft einen Rahmen, in dem neben rechtlichen Fragen auch Beziehungen, Interessen und Zukunft berücksichtigt werden können."
+        variant="ivory"
+      >
+        <div className="grid gap-5 md:grid-cols-2">
+          {principles.map(([title, text], index) => (
+            <article key={title} className="rounded-[2rem] border border-ink/10 bg-white/60 p-7 sm:p-9">
+              <span className="text-xs font-bold tracking-[0.22em] text-clay">0{index + 1}</span>
+              <h2 className="mt-7 font-serif text-3xl font-medium">{title}</h2>
+              <p className="mt-4 leading-7 text-ink/65">{text}</p>
+            </article>
+          ))}
         </div>
       </Section>
 
       <Section
-        variant="contrast"
-        title="Was eine gute Mediation ausmacht"
-        intro="Weniger Druck, mehr Verbindlichkeit: nachvollziehbarer Prozess, klare Ergebnisse, realistische Umsetzung."
+        eyebrow="Wann Mediation passt"
+        title="Wenn es mehr zu klären gibt als eine einzelne Rechtsfrage."
+        variant="sage"
       >
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Transparenter Prozess</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Fahrplan, Zeitbedarf und Kosten vorab klären. Jede Sitzung liefert ein kurzes Protokoll.
-            </p>
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="font-serif text-3xl font-medium">Mediation kann sinnvoll sein, wenn …</h2>
+            <ul className="mt-6 space-y-4 text-lg leading-8 text-ink/68">
+              {[
+                "Sie künftig weiter miteinander zu tun haben.",
+                "Gespräche festgefahren sind, aber eine Einigung noch möglich erscheint.",
+                "Vertraulichkeit und ein kontrollierbarer Rahmen wichtig sind.",
+                "mehrere Themen oder Personen miteinander verbunden sind.",
+                "Sie Entscheidungen nicht vollständig an Dritte abgeben möchten."
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span aria-hidden className="mt-3 h-2 w-2 shrink-0 rounded-full bg-clay" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Verbindliche Ergebnisse</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Vereinbarungen konkret, prüfbar und umsetzbar formulieren - mit Verantwortlichkeiten und Terminen.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-[#1f3358] bg-[#0f1e35] p-6 shadow-soft">
-            <h3 className="font-semibold text-white">Eskalationsbremse</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">
-              Konflikte früh kanalisieren, damit Klage oder Vollstreckung nur als letzte Option dienen müssen.
+          <div className="rounded-[2rem] bg-ink p-8 text-ivory sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-sage-light">Wichtig</p>
+            <h2 className="mt-5 font-serif text-3xl font-medium">Mediation ersetzt keine einseitige Rechtsberatung.</h2>
+            <p className="mt-5 leading-7 text-ivory/68">
+              Stephanie Meisner begleitet das Verfahren als neutrale Mediatorin. Sie entscheidet
+              den Konflikt nicht und berät keine Partei gegen die andere. Vor einer abschließenden
+              Vereinbarung kann unabhängiger rechtlicher Rat sinnvoll sein.
             </p>
           </div>
         </div>
       </Section>
 
-      <Section variant="contrast" align="center" title="Nächster Schritt">
-        <div className="max-w-2xl mx-auto space-y-4 text-white/85">
-          <p>Ich kläre Ziele, Themen und Zeitplan - und starte mit einem strukturierten Kick-off.</p>
-          <Link href="/kontakt" className="no-underline inline-flex">
-            <Button size="lg">Kontakt aufnehmen</Button>
-          </Link>
-        </div>
-      </Section>
+      <ClosingCTA
+        title="Ob Mediation passt, lässt sich klären, bevor Sie sich festlegen."
+        text="In einem ersten Orientierungsgespräch betrachten wir Situation, Beteiligte und möglichen Rahmen."
+      />
     </>
   );
 }

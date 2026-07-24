@@ -1,35 +1,35 @@
-# Stephanie Meisner – Juristin Website
+# Stephanie Meisner – Mediation & Konfliktklärung
 
-Moderne, seriöse Website für Stephanie Meisner als Juristin mit Schwerpunkt Familien- und Erbrecht in Haßfurt.
+Premium-Website für Stephanie Meisner als Volljuristin und Mediatorin. Die
+Positionierung konzentriert sich vollständig auf vertrauliche Mediation und
+strukturierte Konfliktklärung.
 
-## Ziel
-- Klare Darstellung von Leistungen (Familienrecht & Erbrecht)
-- Vertrauensaufbau durch seriöse Gestaltung und strukturierte Inhalte
-- Mehr Mandantenanfragen per Telefon, E-Mail oder Kontaktformular
+## Inhalte
 
-## Tech-Stack
-- Next.js 14 (App Router), React 18, TypeScript
-- Tailwind CSS für Styles
-- ESLint (Next core web vitals) und Prettier
-
-## Struktur
-- `app/` – Seiten und Routen (App Router)
-- `components/` – wiederverwendbare UI-Komponenten
-- `lib/` – Hilfsfunktionen und Dummy-Daten
-- `styles/` – globale Styles (Tailwind)
+- Mediation und Verfahrensgrundsätze
+- Konfliktfelder: Familie, Erbe, Gesundheit und private Konflikte
+- Transparenter Ablauf und Kostenrahmen
+- Interaktiver Konflikt-Navigator ohne Datenspeicherung
+- Kontaktanfrage mit optionalem Resend-Versand
+- SEO-Metadaten, Open-Graph-Bild, Sitemap und Weiterleitungen alter URLs
 
 ## Lokale Entwicklung
-1. Abhängigkeiten installieren: `npm install`
-2. Entwicklung starten: `npm run dev` (http://localhost:3000)
-3. Linting: `npm run lint`
-4. Formatieren: `npm run format`
-5. Typprüfung: `npm run typecheck`
 
-## Inhalte anpassen
-- Kontaktdaten in `components/Footer.tsx`, `app/kontakt/page.tsx`, `components/ContactForm.tsx`
-- SEO-Basis in `app/layout.tsx` und pro Seite via `export const metadata`
-- Logo/Bilder im Ordner `public/`
+```bash
+npm install
+npm run dev
+npm run typecheck
+npm run build
+```
 
-## Hinweise
-- Kontaktformular ist aktuell eine Versand-Demo (Frontend-Only).
-- Für Produktion empfiehlt sich ein E-Mail/CRM-Backend und Anti-Spam (z. B. hCaptcha/Cloudflare Turnstile).
+## Kontaktformular
+
+Für den serverseitigen Formularversand werden in Vercel folgende
+Umgebungsvariablen benötigt:
+
+- `RESEND_API_KEY`
+- `CONTACT_FROM_EMAIL` (verifizierte Absenderadresse)
+- `CONTACT_TO_EMAIL` (optional; Standard: `Meisner.bamberg@freenet.de`)
+
+Ohne konfigurierte Versanddaten zeigt das Formular eine verständliche
+Fallback-Meldung mit direktem E-Mail-Link.

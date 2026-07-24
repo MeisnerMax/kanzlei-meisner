@@ -1,63 +1,75 @@
-import Link from "next/link";
 import Image from "next/image";
-import Button from "@/components/Button";
+import { ButtonLink } from "@/components/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-gradient-to-b from-[#050d1a] via-[#050915] to-transparent with-blob">
-      <div className="absolute inset-0 bg-grid opacity-10 [mask-image:linear-gradient(to_bottom,white,transparent_80%)]"></div>
-      <div className="container-max relative z-10 grid gap-12 py-24 sm:py-32 md:grid-cols-2 md:items-center">
-        <div className="max-w-3xl hero-fly-left">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white">
-            Stephanie Meisner
-          </h1>
-          <p className="mt-6 text-xl text-white/90 leading-relaxed">
-            Juristin & Mediatorin für Familien-, Erb- und Zivilrecht. Klar strukturiert, mit 30+ Jahren Erfahrung und verlässlicher Kommunikation.
+    <section className="relative overflow-hidden bg-ivory pb-20 pt-32 sm:pb-28 sm:pt-40">
+      <div className="absolute left-[-14rem] top-[-18rem] h-[36rem] w-[36rem] rounded-full border border-sage/20" />
+      <div className="absolute left-[-8rem] top-[-12rem] h-[26rem] w-[26rem] rounded-full border border-sage/25" />
+      <div className="container-max relative z-10 grid gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+        <div className="max-w-3xl">
+          <p className="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-clay">
+            <span className="h-px w-10 bg-clay" />
+            Mediation & Konfliktklärung
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Link href="/kontakt" className="no-underline" aria-label="Termin vereinbaren">
-              <Button size="lg" className="w-full sm:w-auto">Jetzt Beratung anfragen</Button>
-            </Link>
-            <Link href="/kontakt#rueckruf" className="no-underline" aria-label="Rückruf anfordern">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="w-full sm:w-auto border-white text-white bg-transparent hover:bg-white/10"
-              >
-                Rückruf anfordern
-              </Button>
-            </Link>
+          <h1 className="font-serif text-[clamp(3.4rem,7.3vw,7.1rem)] font-medium leading-[0.92] tracking-[-0.055em] text-ink">
+            Aus festgefahren
+            <span className="block italic text-sage-dark">wird verhandelbar.</span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/68 sm:text-xl sm:leading-9">
+            Stephanie Meisner schafft einen neutralen Rahmen, in dem Konflikte
+            sortiert, Interessen verstanden und tragfähige Vereinbarungen
+            entwickelt werden können.
+          </p>
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <ButtonLink href="/kontakt" size="lg" className="w-full sm:w-auto">
+              Orientierungsgespräch anfragen
+            </ButtonLink>
+            <ButtonLink
+              href="/#konflikt-navigator"
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto"
+            >
+              Passt Mediation zu uns?
+            </ButtonLink>
           </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-md">
-              <div className="text-2xl font-semibold text-[#e8edf5]">30+ Jahre</div>
-              <div className="text-sm text-[#c6cede]">Erfahrung als Juristin</div>
+          <div className="mt-12 grid max-w-2xl grid-cols-3 border-y border-ink/12 py-5">
+            <div className="pr-4">
+              <div className="font-serif text-2xl font-semibold text-ink sm:text-3xl">30+</div>
+              <div className="mt-1 text-xs leading-5 text-ink/50">Jahre juristische Erfahrung</div>
             </div>
-            <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-md">
-              <div className="text-2xl font-semibold text-[#e8edf5]">20+ Jahre</div>
-              <div className="text-sm text-[#c6cede]">Mediatorin</div>
+            <div className="border-l border-ink/12 px-4">
+              <div className="font-serif text-2xl font-semibold text-ink sm:text-3xl">20+</div>
+              <div className="mt-1 text-xs leading-5 text-ink/50">Jahre als Mediatorin</div>
             </div>
-            <div className="rounded-xl border border-[#1f3358] bg-[#0f1e35] p-4 shadow-md">
-              <div className="text-2xl font-semibold text-[#e8edf5]">500+</div>
-              <div className="text-sm text-[#c6cede]">Zufriedene Kunden</div>
+            <div className="border-l border-ink/12 pl-4">
+              <div className="font-serif text-2xl font-semibold text-ink sm:text-3xl">1:1</div>
+              <div className="mt-1 text-xs leading-5 text-ink/50">persönlich und vertraulich</div>
             </div>
           </div>
         </div>
-        <div className="relative h-64 sm:h-80 md:h-96 hero-fly-right">
-          <div className="absolute -inset-3 rounded-2xl border border-white/60 bg-white/10 shadow-xl-soft"></div>
-          <div className="absolute inset-0 overflow-hidden rounded-xl">
+
+        <div className="relative mx-auto w-full max-w-[34rem]">
+          <div className="absolute -right-6 -top-6 h-full w-full rounded-[2.5rem] border border-sage/35" />
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-sand shadow-[0_30px_80px_rgba(25,37,34,0.16)]">
             <Image
-              src="/Justicia.jpg"
-              alt="Symbolfoto Beratung"
+              src="/stephanie-meisner-portrait.webp"
+              alt="Stephanie Meisner, Volljuristin und Mediatorin"
               fill
               priority
-              sizes="(min-width: 768px) 40vw, 90vw"
-              className="rounded-xl object-cover ring-1 ring-black/5 hero-kenburns"
+              sizes="(min-width: 1024px) 42vw, 90vw"
+              className="object-cover object-[center_28%]"
             />
+          </div>
+          <div className="absolute -bottom-7 -left-4 max-w-[17rem] rounded-3xl border border-white/70 bg-white/88 p-5 shadow-[0_18px_50px_rgba(25,37,34,0.14)] backdrop-blur sm:-left-10 sm:p-6">
+            <p className="font-serif text-xl leading-7 text-ink">
+              „Ich entscheide nicht, wer recht hat. Ich sorge dafür, dass wieder
+              verhandelt werden kann.“
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

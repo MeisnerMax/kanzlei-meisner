@@ -1,51 +1,67 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import NavLink from "@/components/NavLink";
 import MobileMenu from "@/components/MobileMenu";
+import { cn } from "@/lib/utils";
 
-const nav = [
-  { href: "/", label: "Start" },
-  { href: "/familienrecht", label: "Familienrecht" },
-  { href: "/erbrecht", label: "Erbrecht" },
-  { href: "/zivilrecht", label: "Zivilrecht" },
-  { href: "/medizinrecht", label: "Medizinrecht" },
+export const navigation = [
   { href: "/mediation", label: "Mediation" },
-  { href: "/anwalt", label: "Anwältin" },
-  { href: "/kontakt", label: "Kontakt" }
-];
+  { href: "/konfliktfelder", label: "Konfliktfelder" },
+  { href: "/ablauf-kosten", label: "Ablauf & Kosten" },
+  { href: "/stephanie-meisner", label: "Über mich" }
+] as const;
 
 export default function Header() {
   const pathname = usePathname();
+
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#050d1a]/95 via-[#050915]/90 to-transparent backdrop-blur-sm border-b border-white/5 text-white">
-      <div className="container-max h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 no-underline">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded bg-primary-700 text-white font-bold">SM</span>
-          <span className="font-serif text-lg font-semibold text-white">Stephanie Meisner</span>
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between rounded-full border border-ink/10 bg-ivory/90 px-4 shadow-[0_12px_40px_rgba(25,37,34,0.08)] backdrop-blur-xl sm:px-5">
+        <Link
+          href="/"
+          className="group flex items-center gap-3 no-underline"
+          aria-label="Stephanie Meisner – Startseite"
+        >
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-ink text-xs font-bold tracking-wider text-ivory">
+            SM
+            <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-ivory bg-clay" />
+          </span>
+          <span className="leading-tight">
+            <span className="block font-serif text-lg font-semibold text-ink">
+              Stephanie Meisner
+            </span>
+            <span className="hidden text-[10px] font-bold uppercase tracking-[0.18em] text-ink/45 sm:block">
+              Mediation & Konfliktklärung
+            </span>
+          </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-1" aria-label="Hauptnavigation">
-          {nav.map((n) => (
-            <NavLink key={n.href} href={n.href} active={pathname === n.href}>
-              {n.href === "/anwalt" ? "Meisner" : n.label}
-            </NavLink>
+
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Hauptnavigation">
+          {navigation.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={cn(
+                "rounded-full px-4 py-2 text-sm font-semibold no-underline transition hover:bg-sage/15 hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-clay",
+                pathname === item.href ? "bg-sage/20 text-ink" : "text-ink/65"
+              )}
+            >
+              {item.label}
+            </Link>
           ))}
         </nav>
-        <div className="hidden md:flex items-center gap-6">
-          
+
+        <div className="hidden items-center gap-3 lg:flex">
           <Link
-            href="https://nexgen-consulting.de"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-sm font-medium text-white/80 hover:text-white hover:border-white/20 hover:bg-white/10 transition-colors"
-            aria-label="NexGen Consulting Website in neuem Tab öffnen"
+            href="/kontakt"
+            className="rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-ivory no-underline transition hover:-translate-y-0.5 hover:bg-ink-soft hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
           >
-            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(16,185,129,0.2)]" aria-hidden="true" />
-            Made by NexGen
+            Gespräch anfragen
           </Link>
         </div>
-        <div className="md:hidden">
-          <MobileMenu nav={nav} currentPath={pathname || "/"} />
+
+        <div className="lg:hidden">
+          <MobileMenu nav={navigation} currentPath={pathname || "/"} />
         </div>
       </div>
     </header>
