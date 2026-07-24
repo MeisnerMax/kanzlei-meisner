@@ -136,7 +136,7 @@ export default function ContactForm() {
             name="contactPreference"
             value={values.contactPreference}
             onChange={(event) => onChange("contactPreference", event.target.value)}
-            className="field-control"
+            className="field-control field-select"
           >
             <option>E-Mail</option>
             <option>Telefon</option>
@@ -151,7 +151,7 @@ export default function ContactForm() {
           value={values.conflictType}
           onChange={(event) => onChange("conflictType", event.target.value)}
           aria-invalid={Boolean(errors.conflictType)}
-          className="field-control"
+          className="field-control field-select"
         >
           <option value="">Bitte auswählen</option>
           <option>Familie & Trennung</option>
@@ -173,7 +173,7 @@ export default function ContactForm() {
           value={values.otherParty}
           onChange={(event) => onChange("otherParty", event.target.value)}
           aria-invalid={Boolean(errors.otherParty)}
-          className="field-control"
+          className="field-control field-select"
         >
           <option value="">Bitte auswählen</option>
           <option>Ja</option>
