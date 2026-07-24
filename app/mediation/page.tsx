@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const principles = [
   ["Freiwillig", "Alle Beteiligten entscheiden selbst, ob sie beginnen, fortfahren und einer Lösung zustimmen."],
-  ["Allparteilich", "Jede Perspektive wird gehört. Die Mediatorin unterstützt das Verfahren, nicht eine Seite."],
+  ["Allparteilich", "Jede Perspektive wird gehört. Ich unterstütze das Verfahren, nicht eine Seite."],
   ["Vertraulich", "Gespräche und Unterlagen bleiben in einem gemeinsam vereinbarten geschützten Rahmen."],
   ["Ergebnisoffen", "Die Lösung steht nicht vorher fest. Sie wird von den Beteiligten selbst entwickelt und geprüft."]
 ] as const;
@@ -69,8 +69,8 @@ export default function MediationPage() {
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-sage-light">Wichtig</p>
             <h2 className="mt-5 font-serif text-3xl font-medium">Mediation ersetzt keine einseitige Rechtsberatung.</h2>
             <p className="mt-5 leading-7 text-ivory/68">
-              Stephanie Meisner begleitet das Verfahren als neutrale Mediatorin. Sie entscheidet
-              den Konflikt nicht und berät keine Partei gegen die andere. Vor einer abschließenden
+              Ich begleite das Verfahren als neutrale Mediatorin. Ich entscheide
+              den Konflikt nicht und berate keine Partei gegen die andere. Vor einer abschließenden
               Vereinbarung kann unabhängiger rechtlicher Rat sinnvoll sein.
             </p>
           </div>

@@ -78,8 +78,6 @@ export default function Page() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Loßbergstraße 12",
-      postalCode: "96106",
       addressLocality: "Ebern",
       addressCountry: "DE"
     },
@@ -193,11 +191,11 @@ export default function Page() {
         <div className="grid lg:grid-cols-2">
           <div className="relative min-h-[34rem] overflow-hidden lg:min-h-[46rem]">
             <Image
-              src="/stephanie-meisner-portrait.webp"
-              alt="Stephanie Meisner im Porträt"
+              src="/stephanie-meisner-gespraech.webp"
+              alt="Stephanie Meisner in einem vertraulichen Mediationsgespräch"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover object-[center_24%]"
+              className="object-cover object-center"
             />
           </div>
           <div className="flex items-center px-7 py-16 sm:px-12 lg:px-16 lg:py-24">
@@ -209,9 +207,9 @@ export default function Page() {
                 Klar in der Struktur. Offen für das, was zwischen den Zeilen liegt.
               </h2>
               <p className="mt-7 text-lg leading-8 text-ink/67">
-                Als Volljuristin und langjährig tätige Mediatorin verbindet Stephanie
-                Meisner analytische Präzision mit einem Blick für die menschliche
-                Dynamik hinter einem Konflikt.
+                Als Volljuristin und langjährig tätige Mediatorin verbinde ich
+                analytische Präzision mit einem Blick für die menschliche Dynamik
+                hinter einem Konflikt.
               </p>
               <blockquote className="mt-8 border-l-2 border-clay pl-6 font-serif text-2xl leading-9 text-ink">
                 „Meine Aufgabe ist nicht, eine Lösung vorzugeben. Meine Aufgabe ist,
@@ -219,7 +217,7 @@ export default function Page() {
               </blockquote>
               <div className="mt-9">
                 <ButtonLink href="/stephanie-meisner" variant="secondary">
-                  Stephanie Meisner kennenlernen
+                  Mehr über mich
                 </ButtonLink>
               </div>
             </div>
@@ -234,10 +232,10 @@ export default function Page() {
       >
         <div className="grid gap-px overflow-hidden rounded-[2rem] bg-ivory/12 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            ["Allparteilich", "Jede Perspektive erhält den Raum, den sie zum Verstandenwerden braucht."],
-            ["Vertraulich", "Das Verfahren findet in einem geschützten und diskreten Rahmen statt."],
-            ["Transparent", "Ablauf, Rollen, Kosten und nächste Schritte bleiben jederzeit nachvollziehbar."],
-            ["Eigenverantwortlich", "Nicht die Mediatorin, sondern die Beteiligten entscheiden über das Ergebnis."]
+            ["Allparteilich", "Ich gebe jeder Perspektive den Raum, den sie zum Verstandenwerden braucht."],
+            ["Vertraulich", "Ich gestalte das Verfahren in einem geschützten und diskreten Rahmen."],
+            ["Transparent", "Ich halte Ablauf, Rollen, Kosten und nächste Schritte jederzeit nachvollziehbar."],
+            ["Eigenverantwortlich", "Sie entscheiden über das Ergebnis – nicht ich."]
           ].map(([title, text]) => (
             <article key={title} className="bg-ink p-7 sm:p-9">
               <span className="mb-8 block h-2.5 w-2.5 rounded-full bg-clay" />

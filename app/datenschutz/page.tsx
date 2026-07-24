@@ -20,9 +20,7 @@ export default function DatenschutzPage() {
           <div className="prose-legal max-w-4xl rounded-[2rem] border border-ink/10 bg-white/65 p-7 sm:p-10">
             <h2>1. Verantwortliche</h2>
             <p>
-              Stephanie Meisner<br />
-              Loßbergstraße 12<br />
-              96106 Ebern<br />
+              Stephanie Meisner, Ebern<br />
               E-Mail:{" "}
               <a href="mailto:Meisner.bamberg@freenet.de">Meisner.bamberg@freenet.de</a>
             </p>

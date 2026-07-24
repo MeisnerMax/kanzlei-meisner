@@ -53,19 +53,19 @@ export default function StephanieMeisnerPage() {
       <PageHero
         eyebrow="Stephanie Meisner"
         title="Juristische Klarheit. Menschliche Zugewandtheit. Eine unabhängige Haltung."
-        intro="Als Volljuristin und Mediatorin begleitet Stephanie Meisner Menschen, die eine belastbare Vereinbarung suchen, ohne den eigenen Blick auf den Konflikt zu verlieren."
+        intro="Als Volljuristin und Mediatorin begleite ich Menschen, die eine belastbare Vereinbarung suchen, ohne den eigenen Blick auf den Konflikt zu verlieren."
       />
 
       <Section variant="sand" className="!py-0">
         <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[38rem] lg:min-h-[50rem]">
             <Image
-              src="/stephanie-meisner-portrait.webp"
+              src="/stephanie-meisner-profil.webp"
               alt="Stephanie Meisner, Volljuristin und Mediatorin"
               fill
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover object-[center_24%]"
+              className="object-cover object-center"
             />
           </div>
           <div className="flex items-center px-7 py-16 sm:px-12 lg:px-16 lg:py-24">
@@ -75,10 +75,10 @@ export default function StephanieMeisnerPage() {
                 Menschen wieder klar sehen, was ihnen wichtig ist und was möglich wird.“
               </p>
               <p className="mt-8 leading-8 text-ink/66">
-                Die juristische Ausbildung schärft den Blick für Struktur, Konsequenzen und
-                präzise Vereinbarungen. Die Mediation ergänzt ihn um eine entscheidende
-                Perspektive: Nicht nur die Positionen, sondern auch Interessen,
-                Beziehungsebenen und Zukunftsfähigkeit gehören an den Tisch.
+                Meine juristische Ausbildung schärft meinen Blick für Struktur,
+                Konsequenzen und präzise Vereinbarungen. Die Mediation ergänzt ihn um
+                eine entscheidende Perspektive: Nicht nur die Positionen, sondern auch
+                Interessen, Beziehungsebenen und Zukunftsfähigkeit gehören an den Tisch.
               </p>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function StephanieMeisnerPage() {
       <Section
         eyebrow="Qualifikation & Erfahrung"
         title="Mehr als drei Jahrzehnte juristische Praxis – heute fokussiert auf Mediation."
-        intro="Fundierte Rechtskenntnis, langjährige Verhandlungserfahrung und eine kontinuierliche Beschäftigung mit Mediation und Medizinrecht prägen die Arbeit von Stephanie Meisner."
+        intro="Fundierte Rechtskenntnis, langjährige Verhandlungserfahrung und meine kontinuierliche Beschäftigung mit Mediation und Medizinrecht prägen meine Arbeit."
         variant="sage"
       >
         <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr]">

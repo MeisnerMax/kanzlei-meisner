@@ -19,7 +19,7 @@ export const mediationFaqs: FAQ[] = [
   },
   {
     q: "Kann ich mich zusätzlich rechtlich beraten lassen?",
-    a: "Ja. Die Mediatorin ist allparteilich und erteilt im Verfahren keine einseitige Rechtsberatung. Bei Bedarf können alle Beteiligten vor einer abschließenden Vereinbarung unabhängigen rechtlichen Rat einholen."
+    a: "Ja. Ich bin allparteilich und erteile im Verfahren keine einseitige Rechtsberatung. Bei Bedarf können alle Beteiligten vor einer abschließenden Vereinbarung unabhängigen rechtlichen Rat einholen."
   },
   {
     q: "Was kostet die Mediation?",
