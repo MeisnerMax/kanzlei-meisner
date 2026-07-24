@@ -14,7 +14,7 @@ export default function KontaktPage() {
       <PageHero
         eyebrow="Kontakt"
         title="Ein erster Kontakt darf kurz sein."
-        intro="Sie müssen Ihren Konflikt nicht vollständig erklären. Wenige Angaben genügen, damit Stephanie Meisner sich persönlich bei Ihnen melden kann."
+        intro="Sie müssen Ihren Konflikt nicht vollständig erklären. Wenige Angaben genügen, damit ich mich persönlich bei Ihnen melden kann."
         cta={false}
       />
 
@@ -30,9 +30,8 @@ export default function KontaktPage() {
               Meisner.bamberg@freenet.de
             </a>
             <address className="mt-6 not-italic leading-7 text-ink/62">
-              Stephanie Meisner<br />
-              Loßbergstraße 12<br />
-              96106 Ebern
+              Ebern<br />
+              Termine nach Vereinbarung
             </address>
             <div className="mt-8 rounded-[1.5rem] bg-sage-wash p-6">
               <p className="font-semibold">Bitte beachten</p>

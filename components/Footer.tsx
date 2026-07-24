@@ -40,7 +40,7 @@ export default function Footer() {
             Weiter
           </h3>
           <ul className="space-y-3 text-ivory/65">
-            <li><Link href="/stephanie-meisner">Über Stephanie Meisner</Link></li>
+            <li><Link href="/stephanie-meisner">Über mich</Link></li>
             <li><Link href="/kontakt">Kontakt</Link></li>
             <li><Link href="/impressum">Impressum</Link></li>
             <li><Link href="/datenschutz">Datenschutz</Link></li>

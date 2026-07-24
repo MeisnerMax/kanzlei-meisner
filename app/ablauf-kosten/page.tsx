@@ -22,7 +22,7 @@ export default function AblaufKostenPage() {
       <PageHero
         eyebrow="Ablauf & Kosten"
         title="Klarheit über den Prozess schafft Ruhe für das Wesentliche."
-        intro="Sie wissen von Beginn an, welche Schritte folgen, welche Rolle die Mediatorin übernimmt und wie der finanzielle Rahmen vereinbart wird."
+        intro="Sie wissen von Beginn an, welche Schritte folgen, welche Rolle ich als Mediatorin übernehme und wie wir den finanziellen Rahmen vereinbaren."
       />
 
       <Section eyebrow="Der Weg" title="Fünf Phasen, ein nachvollziehbarer Prozess." variant="white">

@@ -17,9 +17,8 @@ export default function HeroSection() {
             <span className="block italic text-sage-dark">wird verhandelbar.</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/68 sm:text-xl sm:leading-9">
-            Stephanie Meisner schafft einen neutralen Rahmen, in dem Konflikte
-            sortiert, Interessen verstanden und tragfähige Vereinbarungen
-            entwickelt werden können.
+            Ich schaffe einen neutralen Rahmen, in dem wir Konflikte sortieren,
+            Interessen verstehen und tragfähige Vereinbarungen entwickeln können.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/kontakt" size="lg" className="w-full sm:w-auto">

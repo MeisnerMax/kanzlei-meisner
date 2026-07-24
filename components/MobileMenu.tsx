@@ -39,7 +39,7 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
 
       {open && (
         <div
-          className="fixed inset-0 z-[60] flex bg-ink/30 backdrop-blur-sm"
+          className="fixed inset-0 z-[60] flex bg-black/65 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-labelledby="mobile-menu-title"
@@ -52,7 +52,7 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
           <div
             ref={panelRef}
             tabIndex={-1}
-            className="relative ml-auto flex h-full w-[88%] max-w-sm flex-col bg-ivory px-6 py-6 text-ink shadow-2xl"
+            className="relative ml-auto flex h-full w-[90%] max-w-sm flex-col bg-ink px-6 py-6 text-ivory shadow-2xl"
           >
             <div className="flex items-center justify-between">
               <h2 id="mobile-menu-title" className="font-serif text-2xl font-semibold tracking-tight">
@@ -61,7 +61,7 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
               <button
                 aria-label="Menü schließen"
                 onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-ink transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ivory/30 bg-ivory/10 text-white transition hover:bg-ivory/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
               >
                 <svg aria-hidden viewBox="0 0 24 24" className="h-6 w-6">
                   <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -75,8 +75,8 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
                 onClick={() => setOpen(false)}
                 className={`rounded-2xl border px-4 py-3.5 text-lg font-semibold no-underline transition ${
                   currentPath === "/"
-                    ? "border-ink bg-ink text-ivory"
-                    : "border-ink/10 bg-white/50 text-ink"
+                    ? "border-ivory bg-ivory text-ink"
+                    : "border-ivory/20 bg-ivory/[0.06] text-ivory hover:border-sage-light hover:bg-sage/20"
                 }`}
               >
                 Startseite
@@ -88,8 +88,8 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
                   onClick={() => setOpen(false)}
                   className={`rounded-2xl border px-4 py-3.5 text-lg font-semibold no-underline transition ${
                     currentPath === n.href
-                      ? "border-ink bg-ink text-ivory"
-                      : "border-ink/10 bg-white/50 text-ink hover:border-sage hover:bg-sage/10"
+                      ? "border-ivory bg-ivory text-ink"
+                      : "border-ivory/20 bg-ivory/[0.06] text-ivory hover:border-sage-light hover:bg-sage/20"
                   }`}
                 >
                   {n.label}
@@ -97,8 +97,8 @@ export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[];
               ))}
             </nav>
 
-            <div className="mt-auto space-y-4 border-t border-ink/10 pt-6">
-              <p className="text-sm leading-6 text-ink/60">
+            <div className="mt-auto space-y-4 border-t border-ivory/15 pt-6">
+              <p className="text-sm leading-6 text-ivory/70">
                 Ein erster Kontakt darf kurz sein. Vertraulich und ohne ausführliche Falldetails.
               </p>
               <Link
