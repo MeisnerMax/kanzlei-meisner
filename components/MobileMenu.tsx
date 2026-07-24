@@ -1,37 +1,27 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Button from "@/components/Button";
 
-type Item = { href: string; label: string };
+type Item = { readonly href: string; readonly label: string };
 
-export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentPath: string }) {
+export default function MobileMenu({ nav, currentPath }: { nav: readonly Item[]; currentPath: string }) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!mounted) return;
+    if (!open) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && handleClose();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
     window.addEventListener("keydown", onKey);
     panelRef.current?.focus();
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
     };
-  }, [mounted]);
-
-  const handleOpen = () => {
-    setMounted(true);
-    requestAnimationFrame(() => setOpen(true));
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setTimeout(() => setMounted(false), 260);
-  };
+  }, [open]);
 
   return (
     <>
@@ -39,34 +29,39 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
         aria-label="Mobiles Menü öffnen"
         aria-haspopup="dialog"
         aria-expanded={open}
-        onClick={handleOpen}
-        className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+        onClick={() => setOpen(true)}
+        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/50 text-ink transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
       >
         <svg aria-hidden viewBox="0 0 24 24" className="h-6 w-6">
           <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
       </button>
 
-      {mounted && (
-        <div className="fixed inset-0 z-[60] flex bg-[#031a38]" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+      {open && (
+        <div
+          className="fixed inset-0 z-[60] flex bg-ink/30 backdrop-blur-sm"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-menu-title"
+        >
           <div
-            className={`absolute inset-0 bg-[#031a38] transition-opacity duration-250 ${open ? "opacity-100" : "opacity-0"}`}
+            className="absolute inset-0"
             aria-hidden
-            onClick={handleClose}
+            onClick={() => setOpen(false)}
           />
           <div
             ref={panelRef}
             tabIndex={-1}
-            className={`relative ml-auto flex h-full w-[85%] max-w-sm flex-col gap-6 border border-white/10 bg-[#06284d] px-6 py-6 text-white shadow-2xl duration-250 ease-out transition-all ${open ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"}`}
+            className="relative ml-auto flex h-full w-[88%] max-w-sm flex-col bg-ivory px-6 py-6 text-ink shadow-2xl"
           >
             <div className="flex items-center justify-between">
-              <h2 id="mobile-menu-title" className="font-serif text-xl font-semibold text-white tracking-tight">
-                Menü
+              <h2 id="mobile-menu-title" className="font-serif text-2xl font-semibold tracking-tight">
+                Orientierung
               </h2>
               <button
                 aria-label="Menü schließen"
-                onClick={handleClose}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white hover:bg-white/20 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                onClick={() => setOpen(false)}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-white/60 text-ink transition hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-clay"
               >
                 <svg aria-hidden viewBox="0 0 24 24" className="h-6 w-6">
                   <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -74,39 +69,49 @@ export default function MobileMenu({ nav, currentPath }: { nav: Item[]; currentP
               </button>
             </div>
 
-            <Link href="/kontakt" onClick={handleClose}>
-              <Button size="md" variant="secondary" className="w-full !bg-white !text-[#0a2240] !hover:bg-white/90 !border-0">
-                Jetzt Beratung anfragen
-              </Button>
-            </Link>
-
-            <nav className="mt-2 grid gap-3" aria-label="Mobiles Hauptmenü">
+            <nav className="mt-8 grid gap-3" aria-label="Mobiles Hauptmenü">
+              <Link
+                href="/"
+                onClick={() => setOpen(false)}
+                className={`rounded-2xl border px-4 py-3.5 text-lg font-semibold no-underline transition ${
+                  currentPath === "/"
+                    ? "border-ink bg-ink text-ivory"
+                    : "border-ink/10 bg-white/50 text-ink"
+                }`}
+              >
+                Startseite
+              </Link>
               {nav.map((n) => (
                 <Link
                   key={n.href}
-                  href={n.href as any}
-                  onClick={handleClose}
-                  className={`no-underline rounded-xl px-4 py-3 text-lg border transition ${
+                  href={n.href}
+                  onClick={() => setOpen(false)}
+                  className={`rounded-2xl border px-4 py-3.5 text-lg font-semibold no-underline transition ${
                     currentPath === n.href
-                      ? "bg-white text-[#0b2443] border-white shadow-soft"
-                      : "text-white/90 border-white/5 bg-white/5 hover:border-white/20 hover:bg-white/10"
+                      ? "border-ink bg-ink text-ivory"
+                      : "border-ink/10 bg-white/50 text-ink hover:border-sage hover:bg-sage/10"
                   }`}
                 >
-                  {n.href === "/anwalt" ? "Meisner" : n.label}
+                  {n.label}
                 </Link>
               ))}
             </nav>
 
-            <div className="mt-auto border-t border-white/10 pt-4 text-sm text-white/60">
-              © {new Date().getFullYear()} Stephanie Meisner, Juristin
+            <div className="mt-auto space-y-4 border-t border-ink/10 pt-6">
+              <p className="text-sm leading-6 text-ink/60">
+                Ein erster Kontakt darf kurz sein. Vertraulich und ohne ausführliche Falldetails.
+              </p>
+              <Link
+                href="/kontakt"
+                onClick={() => setOpen(false)}
+                className="flex min-h-12 items-center justify-center rounded-full bg-clay px-5 py-3 font-semibold text-white no-underline"
+              >
+                Gespräch anfragen
+              </Link>
             </div>
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        .duration-250 { transition-duration: 250ms; }
-      `}</style>
     </>
   );
 }

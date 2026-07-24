@@ -1,35 +1,81 @@
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import Link from "next/link";
+import { type ButtonHTMLAttributes, forwardRef, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "tertiary";
-type Size = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "secondary" | "quiet";
+type ButtonSize = "sm" | "md" | "lg";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: Variant;
-  size?: Size;
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
 }
 
-function styles(variant: Variant, size: Size) {
+interface ButtonLinkProps {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  ariaLabel?: string;
+}
+
+export function buttonStyles(
+  variant: ButtonVariant = "primary",
+  size: ButtonSize = "md"
+) {
   const base =
-    "inline-flex items-center justify-center rounded-full font-semibold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap";
-  const variants: Record<Variant, string> = {
-    primary: "bg-primary-700 text-white hover:bg-primary-800",
-    secondary: "border-2 border-primary-700 text-primary-700 bg-transparent hover:bg-primary-50",
-    tertiary: "bg-transparent text-primary-700 hover:bg-primary-50"
+    "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full font-semibold no-underline transition duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-clay focus-visible:ring-offset-4 focus-visible:ring-offset-ivory disabled:cursor-not-allowed disabled:opacity-50";
+  const variants: Record<ButtonVariant, string> = {
+    primary:
+      "bg-ink text-ivory shadow-[0_16px_40px_rgba(25,37,34,0.18)] hover:-translate-y-0.5 hover:bg-ink-soft hover:text-white",
+    secondary:
+      "border border-ink/25 bg-white/55 text-ink backdrop-blur hover:-translate-y-0.5 hover:border-ink hover:bg-white hover:text-ink",
+    quiet: "text-ink hover:bg-sage/15 hover:text-ink"
   };
-  const sizes: Record<Size, string> = {
-    sm: "h-10 px-4 text-sm",
-    md: "h-12 px-6",
-    lg: "h-12 px-7 text-lg"
+  const sizes: Record<ButtonSize, string> = {
+    sm: "px-5 py-2.5 text-sm",
+    md: "px-6 py-3 text-sm",
+    lg: "px-7 py-3.5 text-base"
   };
   return cn(base, variants[variant], sizes[size]);
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
   { className, variant = "primary", size = "md", ...props },
   ref
 ) {
-  return <button ref={ref} className={cn(styles(variant, size), className)} {...props} />;
+  return (
+    <button
+      ref={ref}
+      className={cn(buttonStyles(variant, size), className)}
+      {...props}
+    />
+  );
 });
+
+export function ButtonLink({
+  href,
+  children,
+  className,
+  variant = "primary",
+  size = "md",
+  ariaLabel
+}: ButtonLinkProps) {
+  return (
+    <Link
+      href={href}
+      aria-label={ariaLabel}
+      className={cn(buttonStyles(variant, size), className)}
+    >
+      {children}
+      <span
+        aria-hidden="true"
+        className="transition-transform duration-300 group-hover:translate-x-1"
+      >
+        ↗
+      </span>
+    </Link>
+  );
+}
 
 export default Button;
